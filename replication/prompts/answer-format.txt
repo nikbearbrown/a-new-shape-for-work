@@ -1,0 +1,5 @@
+Return only a JSON object, with no preamble and no code fences:
+
+{"answers": [{"id": "the item's id", "answer": "...", "alt": "... or null", "confidence": "high, medium or low", "reason": "one sentence"}]}
+
+Give exactly one answer for every item you were sent, in any order, using each item's id exactly as given. Answer each item on its own merits; do not make items agree with each other for consistency's sake.

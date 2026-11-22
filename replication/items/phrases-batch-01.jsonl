@@ -1,0 +1,300 @@
+{"id": "p0301", "phrase": "covid19 vaccination", "mentions": 1603, "occupations": ["Registered Nurses", "Nurse Practitioners", "Radiologic Technologists and Technicians"]}
+{"id": "p0302", "phrase": "linux", "mentions": 1603, "occupations": ["Software Developers", "Computer Systems Engineers/Architects", "Computer User Support Specialists"]}
+{"id": "p0303", "phrase": "revit", "mentions": 1587, "occupations": ["Architects, Except Landscape and Naval", "Mechanical Engineers", "Project Management Specialists"]}
+{"id": "p0304", "phrase": "customer relationship management", "mentions": 1583, "occupations": ["Sales Managers", "Customer Service Representatives", "Wind Energy Development Managers"]}
+{"id": "p0305", "phrase": "monitoring", "mentions": 1580, "occupations": ["Registered Nurses", "Software Developers", "Psychiatric Technicians"]}
+{"id": "p0306", "phrase": "procedures", "mentions": 1579, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical and Health Services Managers"]}
+{"id": "p0307", "phrase": "oral communication", "mentions": 1573, "occupations": ["Lawyers", "Project Management Specialists", "Nurse Practitioners"]}
+{"id": "p0308", "phrase": "creativity", "mentions": 1572, "occupations": ["Marketing Managers", "Chefs and Head Cooks", "Project Management Specialists"]}
+{"id": "p0309", "phrase": "cost control", "mentions": 1563, "occupations": ["Project Management Specialists", "Construction Managers", "General and Operations Managers"]}
+{"id": "p0310", "phrase": "accountability", "mentions": 1557, "occupations": ["Registered Nurses", "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop", "General and Operations Managers"]}
+{"id": "p0311", "phrase": "ability to work in a fastpaced environment", "mentions": 1549, "occupations": ["Customer Service Representatives", "First-Line Supervisors of Retail Sales Workers", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0312", "phrase": "physical fitness", "mentions": 1549, "occupations": ["Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop", "Pesticide Handlers, Sprayers, and Applicators, Vegetation", "Coaches and Scouts"]}
+{"id": "p0313", "phrase": "hospitality", "mentions": 1540, "occupations": ["General and Operations Managers", "Sales Managers", "Chefs and Head Cooks"]}
+{"id": "p0314", "phrase": "property management", "mentions": 1540, "occupations": ["Property, Real Estate, and Community Association Managers", "Accountants and Auditors", "General and Operations Managers"]}
+{"id": "p0315", "phrase": "recruitment", "mentions": 1538, "occupations": ["Human Resources Specialists", "Human Resources Managers", "Medical and Health Services Managers"]}
+{"id": "p0316", "phrase": "journal entries", "mentions": 1537, "occupations": ["Accountants and Auditors", "Bookkeeping, Accounting, and Auditing Clerks", "Financial Managers"]}
+{"id": "p0317", "phrase": "patientcentered care", "mentions": 1518, "occupations": ["Registered Nurses", "Clinical Nurse Specialists", "Nurse Practitioners"]}
+{"id": "p0318", "phrase": "insurance", "mentions": 1516, "occupations": ["Registered Nurses", "Customer Service Representatives", "Insurance Sales Agents"]}
+{"id": "p0319", "phrase": "salesforce", "mentions": 1516, "occupations": ["Sales Managers", "First-Line Supervisors of Office and Administrative Support Workers", "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products"]}
+{"id": "p0320", "phrase": "computer proficiency", "mentions": 1504, "occupations": ["Registered Nurses", "Nurse Practitioners", "Customer Service Representatives"]}
+{"id": "p0321", "phrase": "root cause analysis", "mentions": 1504, "occupations": ["Industrial Production Managers", "Manufacturing Engineers", "Software Developers"]}
+{"id": "p0322", "phrase": "data visualization", "mentions": 1495, "occupations": ["Business Intelligence Analysts", "Data Scientists", "Software Developers"]}
+{"id": "p0323", "phrase": "patient advocacy", "mentions": 1491, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical and Health Services Managers"]}
+{"id": "p0324", "phrase": "financial statements", "mentions": 1488, "occupations": ["Accountants and Auditors", "Financial Managers", "Bookkeeping, Accounting, and Auditing Clerks"]}
+{"id": "p0325", "phrase": "family medicine", "mentions": 1485, "occupations": ["Family Medicine Physicians", "Nurse Practitioners", "Emergency Medicine Physicians"]}
+{"id": "p0326", "phrase": "emergency response", "mentions": 1479, "occupations": ["Registered Nurses", "Police and Sheriff's Patrol Officers", "Medical and Health Services Managers"]}
+{"id": "p0327", "phrase": "nursing care", "mentions": 1479, "occupations": ["Registered Nurses", "Clinical Nurse Specialists", "Medical and Health Services Managers"]}
+{"id": "p0328", "phrase": "staffing", "mentions": 1475, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Human Resources Specialists"]}
+{"id": "p0329", "phrase": "hipaa compliance", "mentions": 1473, "occupations": ["Registered Nurses", "Pharmacists", "Nurse Practitioners"]}
+{"id": "p0330", "phrase": "vital signs", "mentions": 1466, "occupations": ["Registered Nurses", "Medical Assistants", "Nursing Assistants"]}
+{"id": "p0331", "phrase": "development", "mentions": 1464, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "Software Developers", "General and Operations Managers"]}
+{"id": "p0332", "phrase": "gaap", "mentions": 1463, "occupations": ["Accountants and Auditors", "Financial Managers", "Treasurers and Controllers"]}
+{"id": "p0333", "phrase": "crm", "mentions": 1451, "occupations": ["Sales Managers", "Wind Energy Development Managers", "Insurance Sales Agents"]}
+{"id": "p0334", "phrase": "machine learning", "mentions": 1447, "occupations": ["Software Developers", "Data Scientists", "Business Intelligence Analysts"]}
+{"id": "p0335", "phrase": "telemetry", "mentions": 1447, "occupations": ["Registered Nurses", "Veterinarians", "Clinical Nurse Specialists"]}
+{"id": "p0336", "phrase": "cash handling", "mentions": 1444, "occupations": ["First-Line Supervisors of Retail Sales Workers", "Customer Service Representatives", "Brokerage Clerks"]}
+{"id": "p0337", "phrase": "git", "mentions": 1443, "occupations": ["Software Developers", "Computer Programmers", "Web Developers"]}
+{"id": "p0338", "phrase": "sales management", "mentions": 1442, "occupations": ["Sales Managers", "General and Operations Managers", "First-Line Supervisors of Retail Sales Workers"]}
+{"id": "p0339", "phrase": "legal writing", "mentions": 1439, "occupations": ["Lawyers", "Paralegals and Legal Assistants", "Judicial Law Clerks"]}
+{"id": "p0340", "phrase": "equal employment opportunity", "mentions": 1434, "occupations": ["Registered Nurses", "Nurse Practitioners", "Sales Managers"]}
+{"id": "p0341", "phrase": "registered nurse (rn) license", "mentions": 1433, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0342", "phrase": "service excellence", "mentions": 1421, "occupations": ["Psychiatric Technicians", "Registered Nurses", "Speech-Language Pathologists"]}
+{"id": "p0343", "phrase": "data analytics", "mentions": 1420, "occupations": ["Business Intelligence Analysts", "Software Developers", "Marketing Managers"]}
+{"id": "p0344", "phrase": "negotiation skills", "mentions": 1418, "occupations": ["Sales Managers", "Lawyers", "Project Management Specialists"]}
+{"id": "p0345", "phrase": "cpa", "mentions": 1413, "occupations": ["Accountants and Auditors", "Financial Managers", "Compliance Managers"]}
+{"id": "p0346", "phrase": "cv", "mentions": 1411, "occupations": ["Physician Assistants", "Anesthesiologists", "General Internal Medicine Physicians"]}
+{"id": "p0347", "phrase": "pushing", "mentions": 1401, "occupations": ["Registered Nurses", "Managers, All Other", "Psychiatric Technicians"]}
+{"id": "p0348", "phrase": "security", "mentions": 1397, "occupations": ["Software Developers", "Private Detectives and Investigators", "Police and Sheriff's Patrol Officers"]}
+{"id": "p0349", "phrase": "acute care", "mentions": 1393, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical and Health Services Managers"]}
+{"id": "p0350", "phrase": "u.s. citizenship", "mentions": 1393, "occupations": ["Personal Financial Advisors", "Software Developers", "Nursing Assistants"]}
+{"id": "p0351", "phrase": "guaranteed hours", "mentions": 1387, "occupations": ["Registered Nurses", "Physical Therapists", "Occupational Therapists"]}
+{"id": "p0352", "phrase": "analysis", "mentions": 1382, "occupations": ["Accountants and Auditors", "Mechanical Engineers", "Project Management Specialists"]}
+{"id": "p0353", "phrase": "basic computer skills", "mentions": 1379, "occupations": ["Registered Nurses", "Customer Service Representatives", "First-Line Supervisors of Retail Sales Workers"]}
+{"id": "p0354", "phrase": "risk assessment", "mentions": 1379, "occupations": ["Project Management Specialists", "Accountants and Auditors", "Compliance Managers"]}
+{"id": "p0355", "phrase": "home health", "mentions": 1378, "occupations": ["Registered Nurses", "Occupational Therapists", "Physical Therapists"]}
+{"id": "p0356", "phrase": "jira", "mentions": 1375, "occupations": ["Software Developers", "Project Management Specialists", "Information Technology Project Managers"]}
+{"id": "p0357", "phrase": "36 hours per week", "mentions": 1372, "occupations": ["Registered Nurses", "Surgical Technologists", "Respiratory Therapists"]}
+{"id": "p0358", "phrase": "accounts receivable", "mentions": 1372, "occupations": ["Accountants and Auditors", "Bookkeeping, Accounting, and Auditing Clerks", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0359", "phrase": "hvac", "mentions": 1372, "occupations": ["Mechanical Engineers", "Project Management Specialists", "Heating, Air Conditioning, and Refrigeration Mechanics and Installers"]}
+{"id": "p0360", "phrase": "physical therapist", "mentions": 1372, "occupations": ["Physical Therapists", "Psychiatric Technicians", "Physical Therapist Assistants"]}
+{"id": "p0361", "phrase": "lead generation", "mentions": 1366, "occupations": ["Sales Managers", "Real Estate Sales Agents", "Solar Sales Representatives and Assessors"]}
+{"id": "p0362", "phrase": "phlebotomy", "mentions": 1365, "occupations": ["Registered Nurses", "Medical Assistants", "Healthcare Support Workers, All Other"]}
+{"id": "p0363", "phrase": "onboarding", "mentions": 1349, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "Human Resources Specialists", "Human Resources Managers"]}
+{"id": "p0364", "phrase": "medical equipment", "mentions": 1336, "occupations": ["Registered Nurses", "Radiologic Technologists and Technicians", "Nurse Practitioners"]}
+{"id": "p0365", "phrase": "shift work", "mentions": 1334, "occupations": ["Registered Nurses", "Radiologic Technologists and Technicians", "Surgical Technologists"]}
+{"id": "p0366", "phrase": "psychiatry", "mentions": 1333, "occupations": ["Psychiatrists", "Nurse Practitioners", "Mental Health Counselors"]}
+{"id": "p0367", "phrase": "advocacy", "mentions": 1325, "occupations": ["Registered Nurses", "Lawyers", "Medical and Health Services Managers"]}
+{"id": "p0368", "phrase": "interviewing", "mentions": 1323, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "Human Resources Specialists", "Human Resources Managers"]}
+{"id": "p0369", "phrase": "cosmetology license", "mentions": 1321, "occupations": ["First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services", "Hairdressers, Hairstylists, and Cosmetologists", "Skincare Specialists"]}
+{"id": "p0370", "phrase": "general ledger", "mentions": 1316, "occupations": ["Accountants and Auditors", "Bookkeeping, Accounting, and Auditing Clerks", "Treasurers and Controllers"]}
+{"id": "p0371", "phrase": "certification", "mentions": 1310, "occupations": ["Registered Nurses", "Nurse Practitioners", "Surgical Technologists"]}
+{"id": "p0372", "phrase": "taxfree stipend", "mentions": 1309, "occupations": ["Registered Nurses", "Physical Therapists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0373", "phrase": "palliative care", "mentions": 1308, "occupations": ["Registered Nurses", "Nurse Practitioners", "Clergy"]}
+{"id": "p0374", "phrase": "barber license", "mentions": 1306, "occupations": ["First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services", "Hairdressers, Hairstylists, and Cosmetologists"]}
+{"id": "p0375", "phrase": "english", "mentions": 1305, "occupations": ["Customer Service Representatives", "Interpreters and Translators", "Sales Managers"]}
+{"id": "p0376", "phrase": "docker", "mentions": 1298, "occupations": ["Software Developers", "Computer Systems Engineers/Architects", "Computer Programmers"]}
+{"id": "p0377", "phrase": "strategic thinking", "mentions": 1296, "occupations": ["Marketing Managers", "Sales Managers", "Project Management Specialists"]}
+{"id": "p0378", "phrase": "kubernetes", "mentions": 1295, "occupations": ["Software Developers", "Computer Systems Engineers/Architects", "Computer Programmers"]}
+{"id": "p0379", "phrase": "stooping", "mentions": 1295, "occupations": ["Registered Nurses", "Managers, All Other", "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop"]}
+{"id": "p0380", "phrase": "drug screening", "mentions": 1290, "occupations": ["Registered Nurses", "Nurse Practitioners", "Customer Service Representatives"]}
+{"id": "p0381", "phrase": "specifications", "mentions": 1290, "occupations": ["Project Management Specialists", "Construction Managers", "Mechanical Engineers"]}
+{"id": "p0382", "phrase": "business acumen", "mentions": 1286, "occupations": ["Sales Managers", "Project Management Specialists", "Human Resources Specialists"]}
+{"id": "p0383", "phrase": "weekly direct deposit", "mentions": 1286, "occupations": ["Registered Nurses", "Mental Health Counselors", "Marriage and Family Therapists"]}
+{"id": "p0384", "phrase": "business", "mentions": 1284, "occupations": ["Sales Managers", "Project Management Specialists", "Marketing Managers"]}
+{"id": "p0385", "phrase": "ms office suite", "mentions": 1275, "occupations": ["Project Management Specialists", "Executive Secretaries and Executive Administrative Assistants", "Accountants and Auditors"]}
+{"id": "p0386", "phrase": "crossfunctional collaboration", "mentions": 1273, "occupations": ["Marketing Managers", "Project Management Specialists", "Sales Managers"]}
+{"id": "p0387", "phrase": "board certification", "mentions": 1270, "occupations": ["Nurse Practitioners", "Family Medicine Physicians", "Obstetricians and Gynecologists"]}
+{"id": "p0388", "phrase": "administrative support", "mentions": 1266, "occupations": ["Executive Secretaries and Executive Administrative Assistants", "Mental Health Counselors", "Occupational Therapists"]}
+{"id": "p0389", "phrase": "windows", "mentions": 1264, "occupations": ["Software Developers", "Computer User Support Specialists", "Customer Service Representatives"]}
+{"id": "p0390", "phrase": "sales experience", "mentions": 1263, "occupations": ["Customer Service Representatives", "Sales Managers", "Real Estate Sales Agents"]}
+{"id": "p0391", "phrase": "ability to work under pressure", "mentions": 1259, "occupations": ["Customer Service Representatives", "Project Management Specialists", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0392", "phrase": "logistics", "mentions": 1259, "occupations": ["Transportation, Storage, and Distribution Managers", "Logisticians", "Logistics Analysts"]}
+{"id": "p0393", "phrase": "resource management", "mentions": 1256, "occupations": ["Registered Nurses", "Project Management Specialists", "Medical and Health Services Managers"]}
+{"id": "p0394", "phrase": "safety management", "mentions": 1254, "occupations": ["Construction Managers", "Project Management Specialists", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0395", "phrase": "cardiology", "mentions": 1240, "occupations": ["Cardiologists", "Veterinarians", "Nurse Practitioners"]}
+{"id": "p0396", "phrase": "medical imaging", "mentions": 1237, "occupations": ["Radiologic Technologists and Technicians", "Magnetic Resonance Imaging Technologists", "Diagnostic Medical Sonographers"]}
+{"id": "p0397", "phrase": "credentials", "mentions": 1235, "occupations": ["Physician Assistants", "Anesthesiologists", "General Internal Medicine Physicians"]}
+{"id": "p0398", "phrase": "client service", "mentions": 1234, "occupations": ["Lawyers", "Veterinarians", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0399", "phrase": "compensation", "mentions": 1227, "occupations": ["Registered Nurses", "Human Resources Specialists", "Human Resources Managers"]}
+{"id": "p0400", "phrase": "operations", "mentions": 1220, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "Software Developers", "General and Operations Managers"]}
+{"id": "p0401", "phrase": "dea license", "mentions": 1209, "occupations": ["Nurse Practitioners", "Veterinarians", "Physician Assistants"]}
+{"id": "p0402", "phrase": "mentorship", "mentions": 1209, "occupations": ["Veterinarians", "Dentists, General", "Software Developers"]}
+{"id": "p0403", "phrase": "housekeeping", "mentions": 1207, "occupations": ["Maids and Housekeeping Cleaners", "First-Line Supervisors of Housekeeping and Janitorial Workers", "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop"]}
+{"id": "p0404", "phrase": "benefits", "mentions": 1204, "occupations": ["Human Resources Specialists", "Human Resources Managers", "Obstetricians and Gynecologists"]}
+{"id": "p0405", "phrase": "plumbing", "mentions": 1201, "occupations": ["Plumbers, Pipefitters, and Steamfitters", "Project Management Specialists", "Mechanical Engineers"]}
+{"id": "p0406", "phrase": "email alerts", "mentions": 1199, "occupations": ["Physician Assistants", "Anesthesiologists", "General Internal Medicine Physicians"]}
+{"id": "p0407", "phrase": "telehealth", "mentions": 1196, "occupations": ["Registered Nurses", "Nurse Practitioners", "Mental Health Counselors"]}
+{"id": "p0408", "phrase": "surgical technologist", "mentions": 1195, "occupations": ["Surgical Technologists", "Surgical Assistants", "Health Specialties Teachers, Postsecondary"]}
+{"id": "p0409", "phrase": "electronic health records", "mentions": 1194, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical Assistants"]}
+{"id": "p0410", "phrase": "client communication", "mentions": 1192, "occupations": ["Veterinarians", "Lawyers", "Project Management Specialists"]}
+{"id": "p0411", "phrase": "nrp", "mentions": 1192, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Respiratory Therapists"]}
+{"id": "p0412", "phrase": "microsoft outlook", "mentions": 1186, "occupations": ["Executive Secretaries and Executive Administrative Assistants", "Customer Service Representatives", "Property, Real Estate, and Community Association Managers"]}
+{"id": "p0413", "phrase": "pulling", "mentions": 1178, "occupations": ["Registered Nurses", "Psychiatric Technicians", "Customer Service Representatives"]}
+{"id": "p0414", "phrase": "mri", "mentions": 1176, "occupations": ["Magnetic Resonance Imaging Technologists", "Veterinarians", "Radiologic Technologists and Technicians"]}
+{"id": "p0415", "phrase": "high school diploma/ged", "mentions": 1174, "occupations": ["Managers, All Other", "Customer Service Representatives", "Patient Representatives"]}
+{"id": "p0416", "phrase": "interdisciplinary collaboration", "mentions": 1172, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Nurse Practitioners"]}
+{"id": "p0417", "phrase": "icu", "mentions": 1164, "occupations": ["Registered Nurses", "Nurse Practitioners", "Veterinarians"]}
+{"id": "p0418", "phrase": "retirement plan", "mentions": 1164, "occupations": ["Registered Nurses", "Veterinarians", "Marriage and Family Therapists"]}
+{"id": "p0419", "phrase": "estimating", "mentions": 1158, "occupations": ["Project Management Specialists", "Construction Managers", "Cost Estimators"]}
+{"id": "p0420", "phrase": "urgent care", "mentions": 1158, "occupations": ["Nurse Practitioners", "Emergency Medicine Physicians", "Physician Assistants"]}
+{"id": "p0421", "phrase": "devops", "mentions": 1157, "occupations": ["Software Developers", "Computer Systems Engineers/Architects", "Computer Programmers"]}
+{"id": "p0422", "phrase": "lean manufacturing", "mentions": 1157, "occupations": ["Manufacturing Engineers", "Industrial Production Managers", "First-Line Supervisors of Production and Operating Workers"]}
+{"id": "p0423", "phrase": "cloud computing", "mentions": 1152, "occupations": ["Software Developers", "Data Scientists", "Computer Systems Engineers/Architects"]}
+{"id": "p0424", "phrase": "tableau", "mentions": 1144, "occupations": ["Business Intelligence Analysts", "Data Scientists", "Data Warehousing Specialists"]}
+{"id": "p0425", "phrase": "hearing", "mentions": 1142, "occupations": ["Registered Nurses", "Nurse Practitioners", "Surgical Technologists"]}
+{"id": "p0426", "phrase": "psychotherapy", "mentions": 1142, "occupations": ["Mental Health Counselors", "Clinical and Counseling Psychologists", "Marriage and Family Therapists"]}
+{"id": "p0427", "phrase": "retail management", "mentions": 1142, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "First-Line Supervisors of Retail Sales Workers", "General and Operations Managers"]}
+{"id": "p0428", "phrase": "emergency medicine", "mentions": 1138, "occupations": ["Veterinarians", "Nurse Practitioners", "Emergency Medicine Physicians"]}
+{"id": "p0429", "phrase": "bookkeeping", "mentions": 1136, "occupations": ["Production, Planning, and Expediting Clerks", "Bookkeeping, Accounting, and Auditing Clerks", "Accountants and Auditors"]}
+{"id": "p0430", "phrase": "market research", "mentions": 1131, "occupations": ["Marketing Managers", "Sales Managers", "Wind Energy Development Managers"]}
+{"id": "p0431", "phrase": "radiography", "mentions": 1129, "occupations": ["Radiologic Technologists and Technicians", "Magnetic Resonance Imaging Technologists", "Veterinarians"]}
+{"id": "p0432", "phrase": "license and certification reimbursement", "mentions": 1128, "occupations": ["Registered Nurses", "Physical Therapists", "Surgical Technologists"]}
+{"id": "p0433", "phrase": "client relationship management", "mentions": 1124, "occupations": ["Project Management Specialists", "Sales Managers", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0434", "phrase": "html", "mentions": 1122, "occupations": ["Software Developers", "Web Developers", "Marketing Managers"]}
+{"id": "p0435", "phrase": "pc skills", "mentions": 1122, "occupations": ["Psychiatric Technicians", "Speech-Language Pathologists", "Licensed Practical and Licensed Vocational Nurses"]}
+{"id": "p0436", "phrase": "treatment plans", "mentions": 1121, "occupations": ["Nurse Practitioners", "Mental Health Counselors", "Physical Therapist Assistants"]}
+{"id": "p0437", "phrase": "c#", "mentions": 1118, "occupations": ["Software Developers", "Computer Programmers", "Software Quality Assurance Analysts and Testers"]}
+{"id": "p0438", "phrase": "azure", "mentions": 1116, "occupations": ["Software Developers", "Computer Systems Engineers/Architects", "Data Scientists"]}
+{"id": "p0439", "phrase": "pain management", "mentions": 1115, "occupations": ["Registered Nurses", "Nurse Practitioners", "Nurse Anesthetists"]}
+{"id": "p0440", "phrase": "health education", "mentions": 1108, "occupations": ["Registered Nurses", "Nurse Practitioners", "Health Education Specialists"]}
+{"id": "p0441", "phrase": "presentation", "mentions": 1106, "occupations": ["Sales Managers", "Chefs and Head Cooks", "Project Management Specialists"]}
+{"id": "p0442", "phrase": "strong work ethic", "mentions": 1104, "occupations": ["Lawyers", "Sales Managers", "Project Management Specialists"]}
+{"id": "p0443", "phrase": "therapy", "mentions": 1103, "occupations": ["Physical Therapists", "Occupational Therapists", "Mental Health Counselors"]}
+{"id": "p0444", "phrase": "cad", "mentions": 1093, "occupations": ["Mechanical Engineers", "Manufacturing Engineers", "Project Management Specialists"]}
+{"id": "p0445", "phrase": "cashiering", "mentions": 1090, "occupations": ["Customer Service Representatives", "Managers, All Other", "First-Line Supervisors of Retail Sales Workers"]}
+{"id": "p0446", "phrase": "reliability", "mentions": 1088, "occupations": ["Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop", "Software Developers", "Customer Service Representatives"]}
+{"id": "p0447", "phrase": "typing", "mentions": 1087, "occupations": ["Production, Planning, and Expediting Clerks", "Customer Service Representatives", "Executive Secretaries and Executive Administrative Assistants"]}
+{"id": "p0448", "phrase": "dialysis", "mentions": 1083, "occupations": ["Registered Nurses", "Critical Care Nurses", "Health Technologists and Technicians, All Other"]}
+{"id": "p0449", "phrase": "automation", "mentions": 1081, "occupations": ["Software Developers", "Manufacturing Engineers", "Insurance Sales Agents"]}
+{"id": "p0450", "phrase": "active listening", "mentions": 1075, "occupations": ["Customer Service Representatives", "First-Line Supervisors of Office and Administrative Support Workers", "Sales Managers"]}
+{"id": "p0451", "phrase": "visual acuity", "mentions": 1071, "occupations": ["Registered Nurses", "Psychiatric Technicians", "Speech-Language Pathologists"]}
+{"id": "p0452", "phrase": "transportation", "mentions": 1058, "occupations": ["Psychiatric Technicians", "Transportation, Storage, and Distribution Managers", "Project Management Specialists"]}
+{"id": "p0453", "phrase": "financial planning", "mentions": 1054, "occupations": ["Personal Financial Advisors", "Financial Managers", "Accountants and Auditors"]}
+{"id": "p0454", "phrase": "pharmacy", "mentions": 1050, "occupations": ["Pharmacists", "Managers, All Other", "Veterinarians"]}
+{"id": "p0455", "phrase": "quality management", "mentions": 1050, "occupations": ["Industrial Production Managers", "Project Management Specialists", "Construction Managers"]}
+{"id": "p0456", "phrase": "mental health counseling", "mentions": 1048, "occupations": ["Mental Health Counselors", "Marriage and Family Therapists", "Substance Abuse and Behavioral Disorder Counselors"]}
+{"id": "p0457", "phrase": "flexible scheduling", "mentions": 1047, "occupations": ["Registered Nurses", "Veterinarians", "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop"]}
+{"id": "p0458", "phrase": "triage", "mentions": 1046, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical Assistants"]}
+{"id": "p0459", "phrase": "solidworks", "mentions": 1044, "occupations": ["Mechanical Engineers", "Manufacturing Engineers", "Architectural and Engineering Managers"]}
+{"id": "p0460", "phrase": "patient monitoring", "mentions": 1042, "occupations": ["Registered Nurses", "Nurse Anesthetists", "Psychiatric Technicians"]}
+{"id": "p0461", "phrase": "sitting", "mentions": 1041, "occupations": ["Registered Nurses", "Nurse Practitioners", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0462", "phrase": "professional profile", "mentions": 1040, "occupations": ["Physician Assistants", "General Internal Medicine Physicians", "Anesthesiologists"]}
+{"id": "p0463", "phrase": "travel nurse", "mentions": 1039, "occupations": ["Registered Nurses", "Physical Therapists", "Surgical Technologists"]}
+{"id": "p0464", "phrase": "relocation assistance", "mentions": 1029, "occupations": ["Veterinarians", "Nurse Practitioners", "Obstetricians and Gynecologists"]}
+{"id": "p0465", "phrase": "radiologic technology", "mentions": 1028, "occupations": ["Radiologic Technologists and Technicians", "Magnetic Resonance Imaging Technologists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0466", "phrase": "associate degree", "mentions": 1027, "occupations": ["Registered Nurses", "Personal Financial Advisors", "Clinical Nurse Specialists"]}
+{"id": "p0467", "phrase": "job search", "mentions": 1022, "occupations": ["Physician Assistants", "Anesthesiologists", "General Internal Medicine Physicians"]}
+{"id": "p0468", "phrase": "stakeholder management", "mentions": 1018, "occupations": ["Project Management Specialists", "Information Technology Project Managers", "Construction Managers"]}
+{"id": "p0469", "phrase": "worklife balance", "mentions": 1017, "occupations": ["Veterinarians", "Nurse Practitioners", "Mental Health Counselors"]}
+{"id": "p0470", "phrase": "mathematics", "mentions": 1015, "occupations": ["Production, Planning, and Expediting Clerks", "Software Developers", "Data Scientists"]}
+{"id": "p0471", "phrase": "microsoft project", "mentions": 1015, "occupations": ["Project Management Specialists", "Construction Managers", "Information Technology Project Managers"]}
+{"id": "p0472", "phrase": "kneeling", "mentions": 1012, "occupations": ["Registered Nurses", "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0473", "phrase": "critical thinking skills", "mentions": 1007, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical and Health Services Managers"]}
+{"id": "p0474", "phrase": "ged", "mentions": 1007, "occupations": ["Customer Service Representatives", "Managers, All Other", "Surgical Technologists"]}
+{"id": "p0475", "phrase": "cultural sensitivity", "mentions": 1006, "occupations": ["Registered Nurses", "Mental Health Counselors", "Medical and Health Services Managers"]}
+{"id": "p0476", "phrase": "pals certification", "mentions": 1004, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0477", "phrase": "erp systems", "mentions": 1001, "occupations": ["Accountants and Auditors", "Purchasing Managers", "Treasurers and Controllers"]}
+{"id": "p0478", "phrase": "care plans", "mentions": 996, "occupations": ["Registered Nurses", "Nurse Practitioners", "Licensed Practical and Licensed Vocational Nurses"]}
+{"id": "p0479", "phrase": "ability to work independently and as part of a team", "mentions": 995, "occupations": ["Customer Service Representatives", "First-Line Supervisors of Retail Sales Workers", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0480", "phrase": "email", "mentions": 993, "occupations": ["Customer Service Representatives", "Chefs and Head Cooks", "Project Management Specialists"]}
+{"id": "p0481", "phrase": "sick pay", "mentions": 990, "occupations": ["Registered Nurses", "Physical Therapists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0482", "phrase": "building codes", "mentions": 988, "occupations": ["Construction Managers", "Project Management Specialists", "Architects, Except Landscape and Naval"]}
+{"id": "p0483", "phrase": "competitive salary", "mentions": 988, "occupations": ["Veterinarians", "Nurse Practitioners", "Project Management Specialists"]}
+{"id": "p0484", "phrase": "incentives", "mentions": 987, "occupations": ["First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services", "Obstetricians and Gynecologists", "Cardiologists"]}
+{"id": "p0485", "phrase": "project scheduling", "mentions": 985, "occupations": ["Project Management Specialists", "Construction Managers", "Architectural and Engineering Managers"]}
+{"id": "p0486", "phrase": "plan of care", "mentions": 984, "occupations": ["Registered Nurses", "Nurse Practitioners", "Physical Therapists"]}
+{"id": "p0487", "phrase": "health care", "mentions": 981, "occupations": ["Registered Nurses", "Nurse Practitioners", "General Internal Medicine Physicians"]}
+{"id": "p0488", "phrase": "contract negotiation", "mentions": 978, "occupations": ["Project Management Specialists", "Lawyers", "Purchasing Managers"]}
+{"id": "p0489", "phrase": "chemistry", "mentions": 975, "occupations": ["Chemists", "Medical Scientists, Except Epidemiologists", "Medical and Clinical Laboratory Technologists"]}
+{"id": "p0490", "phrase": "medications", "mentions": 974, "occupations": ["Registered Nurses", "Nurse Practitioners", "Licensed Practical and Licensed Vocational Nurses"]}
+{"id": "p0491", "phrase": "ability to meet deadlines", "mentions": 973, "occupations": ["Customer Service Representatives", "Project Management Specialists", "Accountants and Auditors"]}
+{"id": "p0492", "phrase": "css", "mentions": 970, "occupations": ["Software Developers", "Web Developers", "Web and Digital Interface Designers"]}
+{"id": "p0493", "phrase": "product development", "mentions": 970, "occupations": ["Mechanical Engineers", "Marketing Managers", "Software Developers"]}
+{"id": "p0494", "phrase": "orientation", "mentions": 968, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Health Education Specialists"]}
+{"id": "p0495", "phrase": "scrum", "mentions": 967, "occupations": ["Software Developers", "Information Technology Project Managers", "Project Management Specialists"]}
+{"id": "p0496", "phrase": "hospital", "mentions": 964, "occupations": ["Registered Nurses", "General Internal Medicine Physicians", "Obstetricians and Gynecologists"]}
+{"id": "p0497", "phrase": "calendar management", "mentions": 957, "occupations": ["Executive Secretaries and Executive Administrative Assistants", "Paralegals and Legal Assistants", "Legal Secretaries and Administrative Assistants"]}
+{"id": "p0498", "phrase": "oracle", "mentions": 956, "occupations": ["Software Developers", "Accountants and Auditors", "Database Administrators"]}
+{"id": "p0499", "phrase": "statistical analysis", "mentions": 956, "occupations": ["Business Intelligence Analysts", "Industrial Production Managers", "Data Scientists"]}
+{"id": "p0500", "phrase": "occupational therapy", "mentions": 955, "occupations": ["Occupational Therapists", "Occupational Therapy Assistants", "Physical Therapists"]}
+{"id": "p0501", "phrase": "procore", "mentions": 953, "occupations": ["Project Management Specialists", "Construction Managers", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0502", "phrase": "safety procedures", "mentions": 953, "occupations": ["Construction Managers", "Managers, All Other", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0503", "phrase": "xray", "mentions": 953, "occupations": ["Radiologic Technologists and Technicians", "Veterinarians", "Magnetic Resonance Imaging Technologists"]}
+{"id": "p0504", "phrase": "blueprints", "mentions": 952, "occupations": ["Construction Managers", "Electricians", "Project Management Specialists"]}
+{"id": "p0505", "phrase": "medicalsurgical nursing", "mentions": 951, "occupations": ["Registered Nurses", "Clinical Nurse Specialists", "Nursing Instructors and Teachers, Postsecondary"]}
+{"id": "p0506", "phrase": "accounting software", "mentions": 949, "occupations": ["Accountants and Auditors", "Bookkeeping, Accounting, and Auditing Clerks", "Financial Managers"]}
+{"id": "p0507", "phrase": "statistics", "mentions": 948, "occupations": ["Data Scientists", "Business Intelligence Analysts", "Biostatisticians"]}
+{"id": "p0508", "phrase": "bilingual", "mentions": 946, "occupations": ["Physical Therapists", "Occupational Therapists", "Speech-Language Pathologists"]}
+{"id": "p0509", "phrase": "pto program", "mentions": 946, "occupations": ["Registered Nurses"]}
+{"id": "p0510", "phrase": "med surg", "mentions": 945, "occupations": ["Registered Nurses"]}
+{"id": "p0511", "phrase": "acute care experience", "mentions": 942, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical and Counseling Psychologists"]}
+{"id": "p0512", "phrase": "surgical procedures", "mentions": 942, "occupations": ["Surgical Technologists", "Veterinarians", "Surgical Assistants"]}
+{"id": "p0513", "phrase": "pmp certification", "mentions": 939, "occupations": ["Project Management Specialists", "Information Technology Project Managers", "Construction Managers"]}
+{"id": "p0514", "phrase": "quickbooks", "mentions": 937, "occupations": ["Accountants and Auditors", "Bookkeeping, Accounting, and Auditing Clerks", "Financial Managers"]}
+{"id": "p0515", "phrase": "health promotion", "mentions": 934, "occupations": ["Registered Nurses", "Nurse Practitioners", "Health Education Specialists"]}
+{"id": "p0516", "phrase": "social media", "mentions": 928, "occupations": ["Marketing Managers", "Human Resources Specialists", "Sales Managers"]}
+{"id": "p0517", "phrase": "cme", "mentions": 927, "occupations": ["Nurse Practitioners", "Obstetricians and Gynecologists", "Family Medicine Physicians"]}
+{"id": "p0518", "phrase": "strong communication skills", "mentions": 920, "occupations": ["Project Management Specialists", "Lawyers", "Accountants and Auditors"]}
+{"id": "p0519", "phrase": "extra shift bonuses", "mentions": 919, "occupations": ["Registered Nurses"]}
+{"id": "p0520", "phrase": "problem resolution", "mentions": 916, "occupations": ["Customer Service Representatives", "Project Management Specialists", "Computer User Support Specialists"]}
+{"id": "p0521", "phrase": "purchasing", "mentions": 914, "occupations": ["Purchasing Managers", "Project Management Specialists", "Chefs and Head Cooks"]}
+{"id": "p0522", "phrase": "detail orientation", "mentions": 913, "occupations": ["Customer Service Representatives", "Project Management Specialists", "Accountants and Auditors"]}
+{"id": "p0523", "phrase": "remote work", "mentions": 912, "occupations": ["Mental Health Counselors", "Insurance Sales Agents", "Software Developers"]}
+{"id": "p0524", "phrase": "associate's degree in nursing", "mentions": 911, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0525", "phrase": "ms excel", "mentions": 910, "occupations": ["Accountants and Auditors", "Project Management Specialists", "Construction Managers"]}
+{"id": "p0526", "phrase": "intervention", "mentions": 908, "occupations": ["Registered Nurses", "Occupational Therapists", "Mental Health Counselors"]}
+{"id": "p0527", "phrase": "american heart association", "mentions": 907, "occupations": ["Registered Nurses", "Surgical Technologists", "Radiologic Technologists and Technicians"]}
+{"id": "p0528", "phrase": "selfstarter", "mentions": 907, "occupations": ["Accountants and Auditors", "Project Management Specialists", "Lawyers"]}
+{"id": "p0529", "phrase": "technical support", "mentions": 906, "occupations": ["Customer Service Representatives", "Computer User Support Specialists", "Sales Managers"]}
+{"id": "p0530", "phrase": "cultural competence", "mentions": 902, "occupations": ["Registered Nurses", "Mental Health Counselors", "Nurse Practitioners"]}
+{"id": "p0531", "phrase": "arrt certification", "mentions": 899, "occupations": ["Radiologic Technologists and Technicians", "Magnetic Resonance Imaging Technologists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0532", "phrase": "emergency care", "mentions": 899, "occupations": ["Registered Nurses", "Veterinarians", "Athletic Trainers"]}
+{"id": "p0533", "phrase": "teamwork skills", "mentions": 892, "occupations": ["Accountants and Auditors", "Customer Service Representatives", "Managers, All Other"]}
+{"id": "p0534", "phrase": "tncc", "mentions": 892, "occupations": ["Registered Nurses", "Clinical Nurse Specialists", "First-Line Supervisors of Firefighting and Prevention Workers"]}
+{"id": "p0535", "phrase": "housing options", "mentions": 888, "occupations": ["Registered Nurses"]}
+{"id": "p0536", "phrase": "sharepoint", "mentions": 886, "occupations": ["Project Management Specialists", "Executive Secretaries and Executive Administrative Assistants", "Computer User Support Specialists"]}
+{"id": "p0537", "phrase": "manual dexterity", "mentions": 884, "occupations": ["Registered Nurses", "Surgical Technologists", "Veterinarians"]}
+{"id": "p0538", "phrase": "customer satisfaction", "mentions": 882, "occupations": ["Sales Managers", "Construction Managers", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0539", "phrase": "associate's degree", "mentions": 881, "occupations": ["Surgical Technologists", "Customer Service Representatives", "Executive Secretaries and Executive Administrative Assistants"]}
+{"id": "p0540", "phrase": "medical assistant", "mentions": 880, "occupations": ["Medical Assistants", "Nurse Practitioners", "Radiologic Technologists and Technicians"]}
+{"id": "p0541", "phrase": "safety compliance", "mentions": 878, "occupations": ["Construction Managers", "Project Management Specialists", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0542", "phrase": "anesthesia", "mentions": 877, "occupations": ["Nurse Anesthetists", "Anesthesiologists", "Veterinarians"]}
+{"id": "p0543", "phrase": "client management", "mentions": 876, "occupations": ["Project Management Specialists", "Lawyers", "Sales Managers"]}
+{"id": "p0544", "phrase": "ob/gyn", "mentions": 874, "occupations": ["Obstetricians and Gynecologists", "Diagnostic Medical Sonographers", "Anesthesiologists"]}
+{"id": "p0545", "phrase": "obstetrics", "mentions": 874, "occupations": ["Obstetricians and Gynecologists", "Nurse Midwives", "Nurse Practitioners"]}
+{"id": "p0546", "phrase": "signon bonus", "mentions": 871, "occupations": ["Veterinarians", "Obstetricians and Gynecologists", "Marriage and Family Therapists"]}
+{"id": "p0547", "phrase": "holidays", "mentions": 868, "occupations": ["First-Line Supervisors of Office and Administrative Support Workers", "Nurse Practitioners", "Private Detectives and Investigators"]}
+{"id": "p0548", "phrase": "bachelor of science in nursing", "mentions": 867, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0549", "phrase": "gynecology", "mentions": 862, "occupations": ["Obstetricians and Gynecologists", "Nurse Midwives", "Nurse Practitioners"]}
+{"id": "p0550", "phrase": "invoicing", "mentions": 859, "occupations": ["Accountants and Auditors", "Project Management Specialists", "Customer Service Representatives"]}
+{"id": "p0551", "phrase": "rn licensure", "mentions": 859, "occupations": ["Registered Nurses", "Nurse Practitioners", "Medical and Health Services Managers"]}
+{"id": "p0552", "phrase": "digital marketing", "mentions": 856, "occupations": ["Marketing Managers", "Market Research Analysts and Marketing Specialists", "Public Relations Managers"]}
+{"id": "p0553", "phrase": "ms project", "mentions": 855, "occupations": ["Project Management Specialists", "Construction Managers", "Information Technology Project Managers"]}
+{"id": "p0554", "phrase": "hospice care", "mentions": 854, "occupations": ["Registered Nurses", "Veterinarians", "Clergy"]}
+{"id": "p0555", "phrase": "iv therapy", "mentions": 854, "occupations": ["Registered Nurses", "Licensed Practical and Licensed Vocational Nurses", "Clinical Nurse Specialists"]}
+{"id": "p0556", "phrase": "r", "mentions": 854, "occupations": ["Data Scientists", "Business Intelligence Analysts", "Biostatisticians"]}
+{"id": "p0557", "phrase": "six sigma", "mentions": 853, "occupations": ["Manufacturing Engineers", "Industrial Production Managers", "Industrial Engineers"]}
+{"id": "p0558", "phrase": "customer focus", "mentions": 850, "occupations": ["Customer Service Representatives", "Sales Managers", "First-Line Supervisors of Office and Administrative Support Workers"]}
+{"id": "p0559", "phrase": "talent acquisition", "mentions": 850, "occupations": ["Human Resources Specialists", "Human Resources Managers", "Agents and Business Managers of Artists, Performers, and Athletes"]}
+{"id": "p0560", "phrase": "hemodialysis", "mentions": 845, "occupations": ["Registered Nurses", "Health Technologists and Technicians, All Other"]}
+{"id": "p0561", "phrase": "subcontractor management", "mentions": 844, "occupations": ["Construction Managers", "Project Management Specialists", "First-Line Supervisors of Construction Trades and Extraction Workers"]}
+{"id": "p0562", "phrase": "surgical technology", "mentions": 843, "occupations": ["Surgical Technologists", "Surgical Assistants", "Health Specialties Teachers, Postsecondary"]}
+{"id": "p0563", "phrase": "recognition", "mentions": 842, "occupations": ["First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services", "Human Resources Managers", "Real Estate Sales Agents"]}
+{"id": "p0564", "phrase": "401(k) retirement plan", "mentions": 840, "occupations": ["Registered Nurses", "Veterinarians", "Surgical Technologists"]}
+{"id": "p0565", "phrase": "nursing experience", "mentions": 838, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0566", "phrase": "clinical research", "mentions": 830, "occupations": ["Clinical Research Coordinators", "Nurse Practitioners", "Medical Scientists, Except Epidemiologists"]}
+{"id": "p0567", "phrase": "medical care", "mentions": 830, "occupations": ["Registered Nurses", "Nurse Practitioners", "Veterinarians"]}
+{"id": "p0568", "phrase": "technology", "mentions": 828, "occupations": ["Sales Managers", "Dentists, General", "Lawyers"]}
+{"id": "p0569", "phrase": "react", "mentions": 826, "occupations": ["Software Developers", "Web Developers", "Computer Programmers"]}
+{"id": "p0570", "phrase": "english language proficiency", "mentions": 825, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Nursing Assistants"]}
+{"id": "p0571", "phrase": "allied health professional", "mentions": 820, "occupations": ["Surgical Technologists", "Cardiovascular Technologists and Technicians", "Diagnostic Medical Sonographers"]}
+{"id": "p0572", "phrase": "flexible spending accounts", "mentions": 820, "occupations": ["Registered Nurses", "Veterinarians", "Lawyers"]}
+{"id": "p0573", "phrase": "program management", "mentions": 818, "occupations": ["Project Management Specialists", "Information Technology Project Managers", "Management Analysts"]}
+{"id": "p0574", "phrase": "bachelor of science in nursing (bsn)", "mentions": 816, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0575", "phrase": "marriage and family therapy", "mentions": 816, "occupations": ["Marriage and Family Therapists", "Mental Health Counselors", "Mental Health and Substance Abuse Social Workers"]}
+{"id": "p0576", "phrase": "power bi", "mentions": 816, "occupations": ["Business Intelligence Analysts", "Accountants and Auditors", "Data Scientists"]}
+{"id": "p0577", "phrase": "unit testing", "mentions": 816, "occupations": ["Software Developers", "Computer Programmers", "Software Quality Assurance Analysts and Testers"]}
+{"id": "p0578", "phrase": "anesthesiology", "mentions": 815, "occupations": ["Anesthesiologists", "Nurse Anesthetists", "Veterinarians"]}
+{"id": "p0579", "phrase": "installation", "mentions": 815, "occupations": ["Plumbers, Pipefitters, and Steamfitters", "Project Management Specialists", "Electricians"]}
+{"id": "p0580", "phrase": "inspection", "mentions": 814, "occupations": ["Industrial Production Managers", "Construction Managers", "Construction and Building Inspectors"]}
+{"id": "p0581", "phrase": "employee assistance programs", "mentions": 812, "occupations": ["Registered Nurses", "Surgical Technologists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0582", "phrase": "restaurant management", "mentions": 812, "occupations": ["General and Operations Managers", "Managers, All Other", "Chefs and Head Cooks"]}
+{"id": "p0583", "phrase": "prospecting", "mentions": 811, "occupations": ["Sales Managers", "Wind Energy Development Managers", "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products"]}
+{"id": "p0584", "phrase": "competitive compensation", "mentions": 807, "occupations": ["Nurse Practitioners", "Veterinarians", "Dentists, General"]}
+{"id": "p0585", "phrase": "jenkins", "mentions": 807, "occupations": ["Software Developers", "Computer Programmers", "Software Quality Assurance Analysts and Testers"]}
+{"id": "p0586", "phrase": "public relations", "mentions": 807, "occupations": ["Marketing Managers", "Coaches and Scouts", "Public Relations Managers"]}
+{"id": "p0587", "phrase": "nursing license", "mentions": 806, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical and Counseling Psychologists"]}
+{"id": "p0588", "phrase": "vital signs monitoring", "mentions": 806, "occupations": ["Registered Nurses", "Licensed Practical and Licensed Vocational Nurses", "Nursing Assistants"]}
+{"id": "p0589", "phrase": "certifications", "mentions": 805, "occupations": ["Registered Nurses", "Clinical and Counseling Psychologists", "Cardiovascular Technologists and Technicians"]}
+{"id": "p0590", "phrase": "proposal writing", "mentions": 805, "occupations": ["Project Management Specialists", "Sales Managers", "Wind Energy Development Managers"]}
+{"id": "p0591", "phrase": "presentations", "mentions": 803, "occupations": ["Executive Secretaries and Executive Administrative Assistants", "Project Management Specialists", "Personal Financial Advisors"]}
+{"id": "p0592", "phrase": "forklift operation", "mentions": 798, "occupations": ["Production, Planning, and Expediting Clerks", "Stockers and Order Fillers", "First-Line Supervisors of Retail Sales Workers"]}
+{"id": "p0593", "phrase": "real estate license", "mentions": 798, "occupations": ["Real Estate Sales Agents", "Property, Real Estate, and Community Association Managers", "First-Line Supervisors of Non-Retail Sales Workers"]}
+{"id": "p0594", "phrase": "work ethic", "mentions": 797, "occupations": ["Lawyers", "Customer Service Representatives", "Sales Managers"]}
+{"id": "p0595", "phrase": "quality", "mentions": 796, "occupations": ["Project Management Specialists", "Manufacturing Engineers", "First-Line Supervisors of Production and Operating Workers"]}
+{"id": "p0596", "phrase": "consultation", "mentions": 795, "occupations": ["Nurse Practitioners", "Clinical and Counseling Psychologists", "Psychiatrists"]}
+{"id": "p0597", "phrase": "microstation", "mentions": 793, "occupations": ["Civil Engineers", "Project Management Specialists", "Transportation Engineers"]}
+{"id": "p0598", "phrase": "video editing", "mentions": 791, "occupations": ["Real Estate Sales Agents", "Film and Video Editors", "Producers and Directors"]}
+{"id": "p0599", "phrase": "bsn degree", "mentions": 790, "occupations": ["Registered Nurses", "Medical and Health Services Managers", "Clinical Nurse Specialists"]}
+{"id": "p0600", "phrase": "compassionate care", "mentions": 790, "occupations": ["Registered Nurses", "Nurse Practitioners", "Veterinarians"]}

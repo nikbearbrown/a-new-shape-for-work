@@ -1,0 +1,19 @@
+You decide which O*NET occupation a job title belongs to, as the title is used in United States job postings. Postings with the title are counted for the occupation you choose, so the question is what most of the people hired under this title actually do.
+
+Each item gives a job title as it appears after cleaning (lower case, with level words such as "senior" and "ii", work-mode words such as "remote", and anything after " - " removed), how many US LinkedIn postings from January 2024 carry it, and its status:
+
+- ambiguous: O*NET lists the title under several occupations, given in `candidates`.
+- none: O*NET does not list the title at all, so `candidates` is empty.
+
+For each item:
+
+1. Decide what most postings with this title are for in the US labour market.
+2. Set `answer` to the O*NET-SOC code of that occupation. For an ambiguous title, prefer one of the candidates, but you may choose any code in the occupation list when none of the candidates fits most postings. Leftover suffixes such as "-ft" (full-time) or "-pt" (part-time) do not change the occupation.
+3. Set `answer` to "-" when no single occupation fits most postings with the title, for example a title that is too generic ("manager") or that spans unrelated jobs. Those postings then stay unassigned, which is better than assigning them wrongly.
+4. Put the second most likely code in `alt` (or null), set confidence, and write one sentence of reason.
+
+Codes must be copied exactly from the occupation list below, in the form 15-1252.00.
+
+FORMAT
+
+OCCUPATIONS

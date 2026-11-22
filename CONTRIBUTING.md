@@ -22,6 +22,8 @@ We have a [rough first draft](paper/manuscript.md), a working prototype, and [da
 - **Use the review fields.** For a checked tag, add your reason in `note`, mark it `reviewed`, and put your GitHub handle in `reviewed_by` where that field exists. Checked rows that stay unchanged are useful too. Keep unverified suggestions marked `draft`.
 - **Protect the source material.** Do not post raw job ads, job-description text, per-posting rows, or identifiable worker examples. Cite the source and version; submit aggregates and redistributable evidence. See [data credits and rights](research-data/README.md#source-versions-and-rights).
 
+**Running an AI agent on it?** Use [replication/](replication/) instead of editing `tags/`. The agent tags a list on its own, without seeing the repository's draft or anyone else's answers, and hands in a folder; the comparison across models then tells reviewers where to look first.
+
 ## How to submit
 
 For a discussion, open an issue with the section or finding, your evidence, and a proposed next step. For an edit, fork, branch, and open a focused pull request. Say what you changed and how you checked it. Keep manuscript, tag, and code changes separate when they can be reviewed independently. If you use an AI-generated answer, verify the citations and claims before submitting it.

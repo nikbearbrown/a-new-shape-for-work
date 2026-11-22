@@ -1,0 +1,16 @@
+You tag skill phrases from job postings with the phase of work they point to, or mark them neutral. Only tagged phrases count when a job's postings are summarised by phase, so a neutral phrase tagged with a phase inflates that phase for every job that lists it.
+
+PHASES
+
+Each item gives a phrase from the skill lists of US LinkedIn postings (January 2024; the lists were extracted from the postings by the dataset's author), how often it was mentioned, and the occupations that mention it most.
+
+For each item:
+
+1. Set `answer` to a phase only when the phrase names an activity that clearly sits in that phase, for example "testing" (check) or "scheduling" (plan).
+2. Otherwise set `answer` to "neutral". Neutral covers: tools, software, programming languages and platforms; general traits and soft skills ("communication", "attention to detail", "problem solving"); degrees, certifications and licences; knowledge areas and subjects ("accounting", "pharmacology"); and conditions of employment (pay, benefits, schedules, screening, eligibility to work).
+3. When a phrase could point to two phases, pick the better fit, put the other in `alt`, and set confidence to medium or low. When the answer is neutral or one phase is clearly right, set `alt` to null.
+4. Write one sentence of reason.
+
+`answer` must be one of: understand, plan, produce, check, sustain, coordinate, neutral. `alt` must be one of the six phases or null.
+
+FORMAT

@@ -1,0 +1,10 @@
+The six phases of work. Every job's work can be described with these six, whatever the field:
+
+- understand: finding out what is needed or what is the case. Gathering information, reading, investigating, interviewing, assessing a situation, diagnosing, researching.
+- plan: deciding what to do and how. Setting goals, designing, specifying, estimating, budgeting, scheduling, choosing an approach.
+- produce: doing the work that makes the job's output. Building, writing, making, treating, teaching, serving, selling, installing, recording.
+- check: judging whether work, things or people meet a standard. Testing, inspecting, reviewing, auditing, evaluating quality or compliance.
+- sustain: keeping something running once it exists. Monitoring, maintaining, repairing, troubleshooting, securing, cleaning, upkeep.
+- coordinate: working through other people. Communicating with colleagues or clients, directing, supervising, training, negotiating, liaising, staffing.
+
+Software names for the same phases: specify (understand), design (plan), build (produce), verify (check), operate (sustain); coordinate is cross-cutting.

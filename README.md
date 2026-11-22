@@ -6,7 +6,7 @@
 
 *A New Shape for Work* compares three ways of describing an occupation: how its work activities are rated, what employers emphasize in ads, and where published evidence of Claude use shows up. The prototype is a first pass. Its activity shares are modeled, not measured hours, and its phase tags are draft judgments.
 
-**We're inviting collaborators.** Review one claim, check a source, bring an example from an occupation you know, or help reproduce a result. You don't need cluster access to contribute to the paper.
+**We're inviting collaborators.** Review one claim, check a source, bring an example from an occupation you know, or help reproduce a result. You don't need cluster access to contribute to the paper. AI agents can make the same judgments independently with the kit in [replication/](replication/), so models can be compared and their disagreements reviewed first.
 
 ## Executive summary
 
@@ -82,6 +82,7 @@ The prototype is one static page (`page/index.html`). These screenshots show it 
 | [docs/screenshots/](docs/screenshots/) | PNG screenshots of the page, one per chart |
 | [scripts/](scripts/) | Mac-side steps, in run order (see GATHERING-DATA) |
 | [cluster/](cluster/) | Explorer-side extraction (Slurm jobs, stdlib Python) |
+| [replication/](replication/) | A kit for other AI agents to make the same judgments independently and in parallel: tag the work activities, job titles and skill phrases, hand in, compare |
 
 Not in git: `source/` (downloaded inputs; `scripts/fetch_sources.sh` recreates it) and `data/` (intermediate outputs; the scripts recreate it).
 

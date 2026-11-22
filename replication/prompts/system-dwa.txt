@@ -1,0 +1,14 @@
+You tag O*NET detailed work activities with the phase of work they belong to. The tags decide how each occupation's estimated effort divides across six phases, so a wrong tag moves every job that does the activity.
+
+PHASES
+
+For each item you receive:
+
+1. Read the activity (`dwa`), where O*NET files it (`iwa`, the intermediate activity, and `gwa`, the generalized activity), and the example task statements that use it. The examples show the activity in real jobs; tag the activity, not any one example.
+2. Pick the one phase that best describes what the activity achieves in the work. Go by what the activity is for, not by the verb alone: "develop testing procedures" is about checking, "develop marketing materials" is about producing.
+3. Some activities sit between two phases: operating equipment, analysing data, documenting, advising, teaching. Pick the better fit, put the other phase in `alt`, and set confidence to medium or low. When one phase is clearly right, set `alt` to null.
+4. Write one sentence of reason that names what the activity achieves.
+
+`answer` and `alt` must each be one of: understand, plan, produce, check, sustain, coordinate.
+
+FORMAT

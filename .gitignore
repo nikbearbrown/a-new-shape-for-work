@@ -4,3 +4,8 @@
 /data/
 __pycache__/
 .DS_Store
+# replication hand-ins and working files never go in the repository
+shape-*/
+.clean/
+reply-*.json
+prompts-*.jsonl
