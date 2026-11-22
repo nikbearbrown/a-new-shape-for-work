@@ -1,0 +1,749 @@
+<meta charset="utf-8">
+<title>A New Shape for Work</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (65ch text, charts up to 1040px), federal-data voice: Public Sans + Plex Mono for codes and provenance. */
+:root {
+  --bg: #f6f6f3; --surface: #fcfcfb; --ink: #16181b; --ink-2: #4d5056; --ink-3: #7a7d83; --rule: #dcdcd6; --grid: #e7e7e2;
+  --accent: #23466e; --accent-soft: #e3e9f1; --neutral-bar: #b9b9b2; --chip: #ecece7; --warn-bg: #fbf3dc; --warn-ink: #6b4e00;
+  --ph-understand: #2a78d6; --ph-plan: #eb6834; --ph-produce: #1baf7a; --ph-check: #eda100; --ph-sustain: #e87ba4; --ph-coordinate: #008300;
+  --f-body: "Public Sans", "Helvetica Neue", Arial, sans-serif; --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151618; --surface: #1c1d20; --ink: #eeeeea; --ink-2: #b9bab6; --ink-3: #8c8e8f; --rule: #34363a; --grid: #2a2c30;
+  --accent: #9cbbe3; --accent-soft: #24303f; --neutral-bar: #5e5f5d; --chip: #26282b; --warn-bg: #3a3017; --warn-ink: #f0d58c;
+  --ph-understand: #3987e5; --ph-plan: #d95926; --ph-produce: #199e70; --ph-check: #c98500; --ph-sustain: #d55181; --ph-coordinate: #0ca30c;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #151618; --surface: #1c1d20; --ink: #eeeeea; --ink-2: #b9bab6; --ink-3: #8c8e8f; --rule: #34363a; --grid: #2a2c30;
+  --accent: #9cbbe3; --accent-soft: #24303f; --neutral-bar: #5e5f5d; --chip: #26282b; --warn-bg: #3a3017; --warn-ink: #f0d58c;
+  --ph-understand: #3987e5; --ph-plan: #d95926; --ph-produce: #199e70; --ph-check: #c98500; --ph-sustain: #d55181; --ph-coordinate: #0ca30c;
+  color-scheme: dark; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 72px; display: grid; gap: 56px; }
+header { display: grid; gap: 14px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+h1 { font-size: clamp(34px, 6vw, 54px); line-height: 1.02; letter-spacing: -.025em; font-weight: 800; margin: 0; text-wrap: balance; }
+h2 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; font-weight: 700; margin: 0; text-wrap: balance; }
+h3 { font-size: 16px; font-weight: 700; margin: 0; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 19px; color: var(--ink-2); max-width: 62ch; }
+section { display: grid; gap: 16px; min-width: 0; }
+.q { font-size: 15px; color: var(--ink-2); max-width: 68ch; }
+.q b { color: var(--ink); font-weight: 600; }
+.summary { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; display: grid; gap: 14px; }
+.summary ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 78ch; }
+.summary li { padding-left: 2px; }
+.chart { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 18px 14px; display: grid; gap: 12px; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart svg text { fill: var(--ink-2); font-family: var(--f-body); font-size: 12px; }
+.chart svg .axis path, .chart svg .axis line { stroke: var(--rule); }
+.chart svg .grid line { stroke: var(--grid); }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 500 13px var(--f-body); color: var(--ink); background: var(--chip); border: 1px solid transparent; border-radius: 999px; padding: 5px 11px; cursor: pointer; }
+.chip:hover { border-color: var(--rule); }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--surface); }
+.chip:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.seg button { font: 500 13px var(--f-body); background: transparent; color: var(--ink-2); border: 0; padding: 6px 10px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); }
+label.lbl { font-size: 13px; color: var(--ink-3); }
+input[type="search"] { font: 14px var(--f-body); color: var(--ink); background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; width: min(380px, 100%); }
+.chart-title { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.chart-title .soc { font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; flex: none; }
+.sw.hatch { background-image: repeating-linear-gradient(45deg, currentColor 0 1.5px, transparent 1.5px 4px); border: 1.5px solid currentColor; box-sizing: border-box; }
+.prov { font-family: var(--f-mono); font-size: 11.5px; line-height: 1.5; color: var(--ink-3); border-top: 1px dashed var(--rule); padding-top: 10px; display: flex; flex-wrap: wrap; gap: 2px 14px; }
+.prov .flag { color: var(--warn-ink); background: var(--warn-bg); padding: 0 5px; border-radius: 3px; }
+.est { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--warn-ink); background: var(--warn-bg); padding: 2px 6px; border-radius: 3px; }
+details.numbers > summary { cursor: pointer; font-size: 13px; color: var(--ink-3); }
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; margin-top: 8px; }
+th, td { text-align: right; padding: 4px 10px; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+th { font-weight: 600; color: var(--ink-2); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.two > * { min-width: 0; }
+.panel h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); font-weight: 600; margin-bottom: 6px; }
+.rank { display: grid; gap: 3px; }
+.rank .r { display: grid; grid-template-columns: minmax(0, 1fr) 46px; gap: 8px; align-items: center; font-size: 13px; }
+.rank .r .lab { position: relative; padding: 2px 6px; z-index: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank .r .lab i { position: absolute; inset: 1px auto 1px 0; border-radius: 0 3px 3px 0; z-index: -1; opacity: .9; }
+.rank .r .v { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.band { display: grid; gap: 4px; }
+.band-h { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-family: var(--f-mono); color: var(--ink-3); text-transform: uppercase; letter-spacing: .04em; border-bottom: 1px solid var(--rule); padding-bottom: 3px; margin-top: 8px; }
+details.task { border-bottom: 1px solid var(--grid); }
+details.task > summary { list-style: none; display: grid; grid-template-columns: 44px 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 5px 2px; cursor: pointer; font-size: 14px; }
+details.task > summary::-webkit-details-marker { display: none; }
+.mix { display: flex; height: 12px; gap: 1px; border-radius: 3px; overflow: hidden; }
+.imp { font-family: var(--f-mono); font-size: 12px; color: var(--ink-2); }
+.tag { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+.task-body { padding: 4px 0 12px 88px; display: grid; gap: 6px; font-size: 13px; color: var(--ink-2); }
+.task-body .dwa { display: flex; gap: 8px; align-items: baseline; }
+.ftbar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; max-width: 420px; align-items: end; height: 46px; }
+.ftbar div { background: var(--accent); opacity: .75; border-radius: 2px 2px 0 0; min-height: 1px; }
+.ftlab { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; max-width: 420px; font-size: 10px; color: var(--ink-3); text-align: center; line-height: 1.2; }
+.note { font-size: 14px; color: var(--ink-2); max-width: 72ch; }
+.missing { border: 1px dashed var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 8px; color: var(--ink-2); }
+.breaks { display: grid; gap: 12px; }
+.breaks div { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 16px; border-top: 1px solid var(--rule); padding-top: 10px; }
+.breaks b { font-weight: 600; }
+.files { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-2); display: grid; gap: 4px; overflow-wrap: anywhere; }
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 5px; padding: 8px 10px; font-size: 13px; line-height: 1.4; max-width: 300px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+#tip b { font-weight: 600; }
+#tip .m { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+.loading { font-size: 13px; color: var(--ink-3); padding: 20px 0; }
+@media (max-width: 640px) {
+  .breaks div { grid-template-columns: 1fr; gap: 4px; }
+  details.task > summary { grid-template-columns: 34px 28px minmax(0, 1fr); }
+  details.task > summary .tag { display: none; }
+  .task-body { padding-left: 0; }
+  .chart { padding: 14px 12px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Job Shape prototype · O*NET 31.0 + job postings + Anthropic Economic Index · built 2026-11-21</div>
+  <h1>A New Shape for Work</h1>
+  <p class="lede"><b>How AI is Affecting Jobs.</b> Where a job's work sits across six phases, estimated from O*NET task ratings, set beside what job postings ask for and where AI use already shows up. Every effort number here is a model, labelled as one.</p>
+</header>
+
+<section class="summary" id="summary">
+  <h2>Executive summary</h2>
+  <ul id="summary-list">
+    <li><b>It works end to end on real data.</b> O*NET task-based effort profiles exist for all 911 occupations O*NET rates (18,420 rated tasks). The posting layer covers every occupation O*NET names a title for: 35% of 1.15 million US LinkedIn postings were assigned to an occupation by title, giving 429 occupations with 50 or more postings. All nine charts in the brief are drawn.</li>
+    <li><b>The calibration case lands in range, loosely.</b> Software developers come out at <span data-k="cal-ord">16%</span> Produce (main model) and <span data-k="cal-occ">22%</span> under the occurrence model, inside the 15–30% hands-on coding range quoted in the brief. The flat and ordinal models agree. The task list itself is the weak part: 7 of its 17 tasks are conferring, supervising or reporting.</li>
+    <li id="sum-gap"><b>The layers disagree, and that is the interesting part.</b> Loading posting results…</li>
+    <li><b>No experience creep in the dated sample, but "entry level" is not entry level.</b> Across 34,960 data-analyst postings (Nov 2022 to Apr 2025) the median stated minimum stayed at 3 years and 88–91% asked for 2 or more. In the January 2024 LinkedIn snapshot, <span data-k="entry-sw">75%</span> of entry-titled software developer postings and <span data-k="entry-acc">75%</span> of entry-titled accountant postings that state a minimum ask for 2+ years.</li>
+    <li><b>The Skills Lexicon is missing common posting terms.</b> Only <span data-k="lex-range">8–33%</span> of skill mentions matched an entry. Git, Kubernetes, Jenkins, nursing and patient care have no entry, and "Linux" resolves to "Linux systems administration".</li>
+    <li><b>The AI overlay is built.</b> Using the Anthropic Economic Index's task coverage, <span data-k="ai-sw">35%</span> of software developers' estimated effort sits in tasks with observed Claude use, against <span data-k="ai-rn">6%</span> for registered nurses and <span data-k="ai-el">0%</span> for electricians. 435 of 911 occupations have no covered task.</li>
+    <li><b>Nothing here is reviewed.</b> The 2,087 work-activity phase tags and the skill-phrase tags are drafts written today; posting skills are the dataset's own model-extracted lists, not employer text. Treat every chart as a picture of the method, not a finding about the labor market.</li>
+  </ul>
+</section>
+
+<section id="s-profile">
+  <h2>1 · The phase profile</h2>
+  <p class="q"><b>Where does this job's work sit?</b> Solid bars are the O*NET task estimate. Hatched bars are posting emphasis: the share of phase-diagnostic skill mentions in LinkedIn postings assigned to the occupation by title (shown when there are 50 or more). The gap between them is the point of the chart.</p>
+  <div class="chart" id="c-profile">
+    <div class="controls">
+      <label class="lbl" for="occ-search">Occupation</label>
+      <input type="search" id="occ-search" list="occ-list" placeholder="Search 911 occupations" autocomplete="off">
+      <datalist id="occ-list"></datalist>
+      <div class="seg" role="group" aria-label="Effort model" id="model-seg">
+        <button type="button" data-m="ordinal" aria-pressed="true">Ordinal (main)</button>
+        <button type="button" data-m="occurrence" aria-pressed="false">Occurrence</button>
+        <button type="button" data-m="flat" aria-pressed="false">Flat</button>
+      </div>
+    </div>
+    <div class="chips" id="feat-chips" aria-label="Featured occupations"></div>
+    <div class="chart-title"><h3 id="profile-title">Software Developers</h3><span class="soc" id="profile-soc"></span><span class="est">Estimated</span></div>
+    <div class="legend" id="profile-legend"></div>
+    <div id="profile-svg"><div class="loading">Loading 3.4 MB of O*NET task data…</div></div>
+    <details class="numbers"><summary>Show the numbers</summary><div class="tbl-wrap" id="profile-table"></div></details>
+    <div class="prov" id="profile-prov"></div>
+  </div>
+  <p class="note">The three models differ only in how O*NET's seven frequency categories become weight. <b>Ordinal</b> uses the category number (1 = yearly or less, 7 = hourly or more), so a daily task counts about twice a monthly one. <b>Occurrence</b> converts categories to times per year (1, 4, 24, 100, 250, 750, 2000), so hourly micro-tasks dominate. <b>Flat</b> ignores frequency. All three multiply by importance and by the share of incumbents who say the task is part of the job. None of them is time.</p>
+</section>
+
+<section id="s-cal">
+  <h2>Calibration · software developers</h2>
+  <p class="q"><b>Does the model reproduce the one occupation with outside time-use data?</b> The brief puts hands-on coding at roughly 15–30% of a developer's time. The shaded band is that range; the dots are the Produce share under each model.</p>
+  <div class="chart" id="c-cal"><div id="cal-svg"></div>
+    <div class="prov"><span>source: O*NET 31.0 tasks for 15-1252.00 (17 rated tasks)</span><span>band: range quoted in the Job Shape brief, not re-checked here</span><span class="flag">phase tags: draft, 0 reviewed</span></div>
+  </div>
+  <p class="note" id="cal-note">It passes, but for a weak reason. The O*NET task list for software developers is written at a high level ("Modify existing software to correct errors…"), and much of its weight sits in Coordinate because 7 of 17 tasks are conferring, supervising or reporting. A pass here says the model is not wildly off. It does not show the model is right.</p>
+</section>
+
+<section id="s-tasks">
+  <h2>7 · The day-to-day</h2>
+  <p class="q"><b>What does the job involve, and how often?</b> Every rated task for the occupation picked above, grouped by its most common frequency rating. The bar shows the task's phase split, the number is importance (1–5). Open a task to see its frequency distribution and the work activities that set its phase.</p>
+  <div class="chart" id="c-tasks">
+    <div class="chart-title"><h3 id="tasks-title">Software Developers</h3><span class="est">Rated frequency, not hours</span></div>
+    <div class="legend" id="tasks-legend"></div>
+    <div id="tasks-list"><div class="loading">Loading…</div></div>
+    <div class="prov" id="tasks-prov"></div>
+  </div>
+</section>
+
+<section id="s-family">
+  <h2>9 · The job family</h2>
+  <p class="q"><b>How do related titles divide up the work?</b> O*NET task estimates on one axis, software and data occupations first, then three outside software to stress-test the universal frame. Follows the model picked in chart 1.</p>
+  <div class="chart" id="c-family">
+    <div class="legend" id="family-legend"></div>
+    <div id="family-svg"><div class="loading">Loading…</div></div>
+    <div class="prov"><span>source: O*NET 31.0 Task Ratings, Tasks to DWAs</span><span id="family-model">model: ordinal</span><span class="flag">phase tags: draft, 0 reviewed</span></div>
+  </div>
+</section>
+
+<section id="s-ladder">
+  <h2>3 · The seniority ladder</h2>
+  <p class="q"><b>Does the work change as people move up?</b> Posting emphasis by the level named in the job title, for the occupation picked in chart 1. O*NET has no seniority, so the top bar repeats the task estimate for reference.</p>
+  <div class="chart" id="c-ladder">
+    <div class="chart-title"><h3 id="ladder-occ"></h3><span class="soc" id="ladder-cov"></span></div>
+    <div class="legend" id="ladder-legend"></div>
+    <div id="ladder-svg"><div class="loading">Loading…</div></div>
+    <details class="numbers"><summary>Show the numbers</summary><div class="tbl-wrap" id="ladder-table"></div></details>
+    <div class="prov" id="ladder-prov"></div>
+  </div>
+</section>
+
+<section id="s-stack">
+  <h2>5 · The requirement stack</h2>
+  <p class="q"><b>What does this job ask for, by type?</b> For the occupation picked in chart 1: share of postings naming each requirement, split into the lexicon's classes so degrees do not crowd out capabilities. Colour marks a phase-diagnostic phrase; grey is phase-neutral. Phrases the Skills Lexicon does not know yet get their own panel.</p>
+  <div class="chart" id="c-stack">
+    <div class="chart-title"><h3 id="stack-title"></h3><span class="soc" id="stack-n"></span></div>
+    <div class="two" id="stack-panels"><div class="loading">Loading…</div></div>
+    <div class="prov" id="stack-prov"></div>
+  </div>
+</section>
+
+<section id="s-exp">
+  <h2>4 · Experience requirements</h2>
+  <p class="q"><b>How much experience do data-analyst roles demand, and is it rising?</b> One ridge per year: the distribution of the first stated minimum ("3+ years of experience…") in each posting.</p>
+  <div class="chart" id="c-exp"><div id="exp-svg"><div class="loading">Loading…</div></div>
+    <div class="prov" id="exp-prov"></div>
+  </div>
+  <p class="note" id="exp-note"></p>
+  <div class="chart" id="c-exp2"><h3>Cross-section · LinkedIn, January 2024</h3><p class="note">Share of postings that state a minimum and ask for 2+ years, by the level named in the title. Cells with fewer than 20 postings are left blank.</p><div class="tbl-wrap" id="exp-table"></div></div>
+</section>
+
+<section id="s-bump">
+  <h2>6 · Rank changes</h2>
+  <p class="q"><b>Which tools are climbing or falling for data analysts?</b> Rank by share of postings naming each tool, per half-year. Hover a line to follow it.</p>
+  <div class="chart" id="c-bump"><div id="bump-svg"><div class="loading">Loading…</div></div>
+    <div class="prov" id="bump-prov"></div>
+  </div>
+</section>
+
+<section id="s-shift">
+  <h2>2 · The phase shift</h2>
+  <p class="q"><b>Has emphasis moved between phases?</b> Data-analyst postings, 2023 against January–April 2025, by draft cue phrases in the description text ("validate", "stakeholders", "maintain"…). Each dot is that phase's share of all cue hits.</p>
+  <div class="chart" id="c-shift"><div class="legend" id="shift-legend"></div><div id="shift-svg"><div class="loading">Loading…</div></div>
+    <div class="prov" id="shift-prov"></div>
+  </div>
+  <p class="note" id="shift-note"></p>
+</section>
+
+<section id="s-ai">
+  <h2>8 · The human/agent overlay</h2>
+  <p class="q"><b>Within each phase, how much of the work is in tasks people already bring to AI?</b> Each phase bar from chart 1 split into the effort in tasks with observed Claude use (solid) and the rest (pale). Follows the occupation and model picked in chart 1.</p>
+  <div class="chart" id="c-ai">
+    <div class="chart-title"><h3 id="ai-title"></h3><span class="soc" id="ai-total"></span><span class="est">Estimated</span></div>
+    <div class="legend" id="ai-legend"></div>
+    <div id="ai-svg"><div class="loading">Loading…</div></div>
+    <h3 style="margin-top:6px">Share of estimated effort in covered tasks, job family</h3>
+    <div id="ai-family" class="rank"></div>
+    <div class="prov"><span>coverage: Anthropic Economic Index, labor_market_impacts/task_penetration.csv (CC-BY, commit 4e5f69f, downloaded 2026-11-21)</span><span>task coverage = LLM-feasible (Eloundou β) and enough work-related Claude use, Aug + Nov 2025 samples; automated use full weight, augmentative half</span><span>joined on task text: 18,680 of 18,838 O*NET 31.0 tasks</span><span class="flag">observed use, not capability or job loss</span></div>
+  </div>
+  <p class="note">Coverage is sparse: 1,354 of 17,998 tasks in the file are above zero, and 435 of the 911 occupations here have no covered task at all. The weights are this page's effort model, not the time shares the Index paper uses, so the totals are not the paper's "observed exposure" numbers.</p>
+</section>
+
+<section id="s-breaks">
+  <h2>Where this prototype breaks</h2>
+  <div class="breaks" id="breaks">
+    <div><b>Analysis is contested</b><p>O*NET's "Analyzing Data or Information" is tagged Understand. For data scientists that sends half the job to Understand and none to Check, because analysis is their product. One tag moves a whole family.</p></div>
+    <div><b>Coarse task lists</b><p>Data scientists have 16 rated tasks and information security analysts 11. With so few tasks, a single tag decides a fifth of the profile.</p></div>
+    <div><b>Work-activity ratings don't separate jobs</b><p>A cross-check built from O*NET's 41 work-activity importance ratings gave almost the same profile for every occupation (about 13 / 17 / 29 / 11 / 9 / 20). Only the task layer distinguishes jobs, so the activity ratings are left out of the charts.</p></div>
+    <div><b>Skills are model-extracted</b><p>The LinkedIn set's skill lists come from the dataset author's own extraction step, so they reflect that model's vocabulary as much as the employer's. Required and preferred are not separated.</p></div>
+    <div><b>Mention isn't time</b><p>Posting emphasis counts what is written down. Most mentions are phase-neutral (tools, soft skills, credentials); the share that qualified is printed under each chart.</p></div>
+    <div><b>One snapshot, one series</b><p>The LinkedIn set is January 2024 only. The dated series covers one title (data analyst) from Google Jobs, with a thin August–November 2024.</p></div>
+    <div><b>Lexicon gaps</b><p>Git, Kubernetes, Jenkins, microservices, nursing and patient care have no lexicon entry, so they sit in the "not in the lexicon yet" panel. The variant "Linux" resolves to the entry "Linux systems administration", which inflates that skill for software developers.</p></div>
+    <div><b>Boilerplate leaks in</b><p>Benefits text reaches the skill lists: "Pet insurance" and "Disability insurance" show up as knowledge for nurses and electricians, and "401(k) plan" had to be ruled phase-neutral by hand. Near-duplicate postings were common too: text dedup removed 21% of postings that survived company-title-location dedup (26% for software developers).</p></div>
+    <div><b>Title ambiguity</b><p>"Data Analyst" is a listed title for eight O*NET occupations; a hand decision maps it to Business Intelligence Analysts (15-2051.01). Title matching assigned 35% of US postings; 19% had ambiguous titles ("manager", "store manager", "physician") and 45% matched nothing. The page shows posting charts only for occupations with 50 or more assigned postings.</p></div>
+  </div>
+</section>
+
+<section id="s-files">
+  <h2>Files and method</h2>
+  <div class="files" id="files">
+    <span>repository: /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work (README, docs/GATHERING-DATA.md, docs/METHOD.md)</span>
+    <span>tags/iwa-phase-tags.tsv: 332 intermediate work activities → phase (brief's mapping, defaults, overrides with reasons)</span>
+    <span>tags/dwa-phase-tags.tsv: 2,087 detailed work activities → phase (manual / patient / verb / object / inherited)</span>
+    <span>tags/skill-phrase-phase-tags.tsv: posting skill phrases that count as phase-diagnostic</span>
+    <span>tags/title-decisions.tsv: hand decisions for ambiguous job titles</span>
+    <span>cluster: /projects/aiskunks/skills-lexicon-work/a-new-shape-for-work/ (extractors, Slurm logs, outputs)</span>
+    <span>O*NET 31.0: /projects/aiskunks/onet/31.0/db_31_0_text (CC BY 4.0, USDOL/ETA)</span>
+  </div>
+  <p class="note">This page includes information from the O*NET 31.0 Database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), used under the CC BY 4.0 license. O*NET® is a trademark of USDOL/ETA. AI coverage: Anthropic Economic Index, labor_market_impacts/task_penetration.csv, CC-BY. Posting data: asaniczka, "1.3M LinkedIn Jobs & Skills (2024)", ODC-By; Luke Barousse, "Data Analyst Job Postings (Google Search)", Apache 2.0, both via Kaggle.</p>
+</section>
+</div>
+<div id="tip" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(() => {
+const PH = ["understand", "plan", "produce", "check", "sustain", "coordinate"];
+const PH_LABEL = { understand: "Understand", plan: "Plan", produce: "Produce", check: "Check", sustain: "Sustain", coordinate: "Coordinate" };
+const PH_SW = { understand: "specify", plan: "design", produce: "build", check: "verify", sustain: "operate", coordinate: "cross-cutting" };
+const FT = ["Yearly or less", "More than yearly", "More than monthly", "More than weekly", "Daily", "Several times daily", "Hourly or more"];
+const FT_SHORT = ["≤ yearly", "> yearly", "> monthly", "> weekly", "daily", "several/day", "hourly+"];
+const FEATURED = [["15-1252.00", "Software developers"], ["15-1253.00", "QA analysts and testers"], ["15-2051.00", "Data scientists"],
+  ["15-2051.01", "BI analysts"], ["29-1141.00", "Registered nurses"], ["13-2011.00", "Accountants and auditors"],
+  ["47-2111.00", "Electricians"], ["13-1082.00", "Project management specialists"]];
+const FAMILY = [["Software and data", ["15-1252.00", "15-1253.00", "15-1254.00", "15-1242.00", "15-1244.00", "15-1212.00", "15-1211.00", "15-2051.00", "15-2051.01", "13-1082.00"]],
+  ["Outside software", ["29-1141.00", "13-2011.00", "47-2111.00"]]];
+const SHORT = { "15-1253.00": "Software QA analysts & testers", "15-1244.00": "Network & systems administrators", "15-1212.00": "Information security analysts",
+  "15-2051.01": "Business intelligence analysts", "13-1082.00": "Project management specialists", "13-2011.00": "Accountants & auditors" };
+const GROUP_PLURAL = { "software-developer": "software developers", "qa-tester": "QA testers", "data-scientist": "data scientists", "data-analyst": "data analysts",
+  "registered-nurse": "registered nurses", "accountant": "accountants", "electrician": "electricians", "project-manager": "project managers" };
+const GROUP_LABEL = { "software-developer": "Software developer", "qa-tester": "QA tester", "data-scientist": "Data scientist", "data-analyst": "Data analyst",
+  "registered-nurse": "Registered nurse", "accountant": "Accountant", "electrician": "Electrician", "project-manager": "Project manager" };
+const LEVELS = ["entry", "mid", "senior", "lead", "unmarked"];
+const LEVEL_LABEL = { entry: "Entry", mid: "Mid", senior: "Senior", lead: "Lead / staff / principal", unmarked: "No level in title" };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const col = p => css("--ph-" + p);
+const pct = (v, d = 0) => (v * 100).toFixed(d) + "%";
+const fmt = d3.format(",");
+const state = { soc: "15-1252.00", model: "ordinal", group: "software-developer" };
+let ON = null, PO = null, OCC = null, BY = null;
+
+const tip = document.getElementById("tip");
+function showTip(ev, html) {
+  tip.innerHTML = html; tip.hidden = false;
+  const r = tip.getBoundingClientRect(), pad = 12;
+  let x = ev.clientX + 14, y = ev.clientY + 14;
+  if (x + r.width > innerWidth - pad) x = ev.clientX - r.width - 14;
+  if (y + r.height > innerHeight - pad) y = ev.clientY - r.height - 14;
+  tip.style.left = Math.max(pad, x) + "px"; tip.style.top = Math.max(pad, y) + "px";
+}
+const hideTip = () => { tip.hidden = true; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function legend(el, extra) {
+  el.innerHTML = PH.map(p => `<span><i class="sw" style="background:${col(p)}"></i>${PH_LABEL[p]} <span style="color:var(--ink-3)">(${PH_SW[p]})</span></span>`).join("") + (extra || "");
+}
+function topRounded(x, y, w, h, r) {
+  r = Math.min(r, w / 2, h); if (h <= 0) return "";
+  return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+}
+function hatchDefs(svg) {
+  const defs = svg.append("defs");
+  PH.forEach(p => {
+    const pat = defs.append("pattern").attr("id", "h-" + p).attr("patternUnits", "userSpaceOnUse").attr("width", 5).attr("height", 5).attr("patternTransform", "rotate(45)");
+    pat.append("rect").attr("width", 5).attr("height", 5).attr("fill", "var(--surface)");
+    pat.append("rect").attr("width", 2).attr("height", 5).attr("fill", col(p));
+  });
+}
+const byOcc = soc => (BY && BY.occupations[soc] && BY.occupations[soc].profile) ? BY.occupations[soc] : null;
+const postingForSoc = soc => { const v = byOcc(soc); return v ? [`${fmt(v.with_skills)} LinkedIn postings`, v] : null; };
+
+/* ---------- chart 1: phase profile ---------- */
+function drawProfile() {
+  const o = OCC.get(state.soc); if (!o) return;
+  const est = o.p[state.model];
+  const post = postingForSoc(state.soc);
+  document.getElementById("profile-title").textContent = o.title;
+  document.getElementById("profile-soc").textContent = `${o.soc} · Job Zone ${o.zone ?? "–"} · ${o.tasks.length} rated tasks`;
+  legend(document.getElementById("profile-legend"), `<span><i class="sw" style="background:var(--ink-2)"></i>solid = O*NET task estimate</span>` +
+    (post ? `<span style="color:var(--ink-2)"><i class="sw hatch"></i>hatched = posting emphasis (${post[0]})</span>` : `<span style="color:var(--ink-3)">fewer than ${BY ? BY.summary.min_postings : 50} LinkedIn postings assigned to this occupation</span>`));
+  const el = document.getElementById("profile-svg"); el.innerHTML = "";
+  const W = Math.max(300, el.clientWidth), H = 280, m = { t: 14, r: 8, b: 44, l: 40 };
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", `Phase profile for ${o.title}`);
+  hatchDefs(svg);
+  const series = post ? [["est", est], ["post", PH.map(p => post[1].profile[p])]] : [["est", est]];
+  const ymax = Math.min(1, Math.ceil(d3.max(series.flatMap(s => s[1])) * 10 + 0.5) / 10);
+  const x = d3.scaleBand().domain(PH).range([m.l, W - m.r]).paddingInner(0.28).paddingOuter(0.1);
+  const xi = d3.scaleBand().domain(series.map(s => s[0])).range([0, x.bandwidth()]).paddingInner(0.12);
+  const y = d3.scaleLinear().domain([0, ymax]).range([H - m.b, m.t]);
+  svg.append("g").attr("class", "grid").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat("")).call(g => g.select(".domain").remove());
+  svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0%"))).call(g => g.select(".domain").remove()).call(g => g.selectAll("line").remove());
+  const xa = svg.append("g").attr("transform", `translate(0,${H - m.b})`);
+  xa.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("stroke", "var(--rule)");
+  PH.forEach(p => {
+    const cx = x(p) + x.bandwidth() / 2;
+    xa.append("text").attr("x", cx).attr("y", 17).attr("text-anchor", "middle").style("font-weight", 600).style("fill", "var(--ink)").text(PH_LABEL[p]);
+    xa.append("text").attr("x", cx).attr("y", 32).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(PH_SW[p]);
+  });
+  series.forEach(([k, vals]) => {
+    PH.forEach((p, i) => {
+      const bx = x(p) + xi(k), bw = xi.bandwidth(), by = y(vals[i]), bh = y(0) - by;
+      svg.append("path").attr("d", topRounded(bx, by, bw, bh, 4)).attr("fill", k === "est" ? col(p) : `url(#h-${p})`)
+        .attr("stroke", k === "est" ? "none" : col(p)).attr("stroke-width", 1.5);
+      svg.append("rect").attr("x", bx - 3).attr("y", m.t).attr("width", bw + 6).attr("height", H - m.b - m.t).attr("fill", "transparent")
+        .on("pointermove", ev => showTip(ev, `<b>${PH_LABEL[p]}</b> · ${k === "est" ? "O*NET task estimate (" + state.model + ")" : "posting emphasis"}<br>${pct(vals[i], 1)}` +
+          (k === "post" ? `<div class="m">share of ${fmt(post[1].diagnostic_mentions)} phase-diagnostic skill mentions</div>` : `<div class="m">share of weighted task effort · estimated</div>`)))
+        .on("pointerleave", hideTip);
+    });
+  });
+  const rows = [["O*NET estimate · " + state.model, est]].concat(post ? [["Posting emphasis", PH.map(p => post[1].profile[p])]] : [])
+    .concat([["O*NET · occurrence", o.p.occurrence], ["O*NET · flat", o.p.flat]].filter(r => !r[0].endsWith(state.model)));
+  document.getElementById("profile-table").innerHTML = `<table><tr><th>Series</th>${PH.map(p => `<th>${PH_LABEL[p]}</th>`).join("")}</tr>` +
+    rows.map(r => `<tr><td>${r[0]}</td>${r[1].map(v => `<td>${pct(v, 1)}</td>`).join("")}</tr>`).join("") + "</table>";
+  document.getElementById("profile-prov").innerHTML =
+    `<span>tasks: O*NET 31.0 Task Ratings (FT, IM, RT) · ${o.tasks.length} tasks · ${o.soc}</span><span>phase: via Tasks to DWAs → dwa-phase-tags.tsv</span>` +
+    (post ? `<span>postings: LinkedIn, ${post[1].dates.join(" to ")} · ${fmt(post[1].with_skills)} deduplicated US postings · ${pct(post[1].diagnostic_mentions / post[1].phrase_mentions)} of ${fmt(post[1].phrase_mentions)} mentions of its 400 most common skill phrases phase-diagnostic</span>` : "") +
+    `<span class="flag">tags: draft, 0 reviewed</span>`;
+}
+
+/* ---------- calibration ---------- */
+function drawCal() {
+  const o = OCC.get("15-1252.00"), el = document.getElementById("cal-svg"); el.innerHTML = "";
+  const W = Math.max(300, el.clientWidth), H = 120, m = { t: 26, r: 16, b: 30, l: 16 };
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "Produce share for software developers under three models against the 15 to 30 percent range");
+  const x = d3.scaleLinear().domain([0, 0.5]).range([m.l, W - m.r]);
+  svg.append("rect").attr("x", x(0.15)).attr("width", x(0.30) - x(0.15)).attr("y", m.t - 8).attr("height", H - m.b - m.t + 8).attr("fill", "var(--accent-soft)").attr("rx", 3);
+  svg.append("text").attr("x", x(0.225)).attr("y", m.t - 12).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-2)").text("15–30% hands-on coding (brief)");
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(".0%")));
+  const models = [["ordinal", "Ordinal"], ["occurrence", "Occurrence"], ["flat", "Flat"]];
+  const yb = d3.scalePoint().domain(models.map(d => d[0])).range([m.t + 10, H - m.b - 14]);
+  models.forEach(([k, lab]) => {
+    const v = o.p[k][2];
+    svg.append("line").attr("x1", x(0)).attr("x2", x(v)).attr("y1", yb(k)).attr("y2", yb(k)).attr("stroke", "var(--grid)").attr("stroke-width", 2);
+    svg.append("circle").attr("cx", x(v)).attr("cy", yb(k)).attr("r", 6).attr("fill", col("produce")).attr("stroke", "var(--surface)").attr("stroke-width", 2);
+    svg.append("text").attr("x", x(v) + 11).attr("y", yb(k) + 4).style("fill", "var(--ink)").text(`${lab} ${pct(v)}`);
+  });
+  document.querySelectorAll('[data-k="cal-ord"]').forEach(e => e.textContent = pct(o.p.ordinal[2]));
+  document.querySelectorAll('[data-k="cal-occ"]').forEach(e => e.textContent = pct(o.p.occurrence[2]));
+  [["ai-sw", "15-1252.00"], ["ai-rn", "29-1141.00"], ["ai-el", "47-2111.00"]].forEach(([k, soc]) => document.querySelectorAll(`[data-k="${k}"]`).forEach(e => e.textContent = pct(d3.sum(OCC.get(soc).c.ordinal))));
+}
+
+/* ---------- chart 7: tasks ---------- */
+function drawTasks() {
+  const o = OCC.get(state.soc);
+  document.getElementById("tasks-title").textContent = o.title;
+  legend(document.getElementById("tasks-legend"));
+  const el = document.getElementById("tasks-list"); el.innerHTML = "";
+  for (let b = 7; b >= 1; b--) {
+    const ts = o.tasks.filter(t => t[4] === b).sort((a, c) => c[2] * c[3] - a[2] * a[3]);
+    if (!ts.length) continue;
+    const band = document.createElement("div"); band.className = "band";
+    band.innerHTML = `<div class="band-h"><span>${FT[b - 1]}</span><span>${ts.length} task${ts.length > 1 ? "s" : ""}</span></div>`;
+    ts.forEach(t => {
+      const d = document.createElement("details"); d.className = "task";
+      const mix = PH.map((p, i) => t[7][i] > 0 ? `<i style="flex:${t[7][i]};background:${col(p)}" title="${PH_LABEL[p]} ${pct(t[7][i])}"></i>` : "").join("");
+      const sm = document.createElement("summary");
+      sm.innerHTML = `<span class="mix">${mix}</span><span class="imp">${t[2].toFixed(1)}</span><span></span><span class="tag">${t[9] > 0 ? `AI ${t[9].toFixed(2)} · ` : ""}${t[1] === "C" ? "core" : "supplemental"} · ${t[3]}%</span>`;
+      sm.children[2].textContent = t[0];
+      d.appendChild(sm);
+      const body = document.createElement("div"); body.className = "task-body";
+      const mx = Math.max(...t[6], 1);
+      body.innerHTML = `<div>Frequency ratings (share of respondents) · mean category ${t[5].toFixed(1)} · importance ${t[2].toFixed(2)} · relevant to ${t[3]}%</div>
+        ${t[9] > 0 ? `<div><b>Observed AI use:</b> task coverage ${t[9].toFixed(2)} in the Anthropic Economic Index</div>` : t[9] === 0 ? `<div>No observed AI use in the Anthropic Economic Index sample.</div>` : ""}
+        <div class="ftbar">${t[6].map(v => `<div style="height:${Math.max(2, v / mx * 100)}%" title="${v}%"></div>`).join("")}</div>
+        <div class="ftlab">${FT_SHORT.map((s, i) => `<span>${s}<br>${t[6][i]}%</span>`).join("")}</div>
+        <div style="margin-top:6px">Work activities that set its phase:</div>`;
+      t[8].forEach(ix => {
+        const w = ON.dwas[ix], row = document.createElement("div"); row.className = "dwa";
+        row.innerHTML = `<i class="sw" style="background:${col(PH[w[1]])}"></i><span></span><span class="tag">${PH_LABEL[PH[w[1]]]} · ${w[2]}</span>`;
+        row.children[1].textContent = w[0]; body.appendChild(row);
+      });
+      d.appendChild(body); band.appendChild(d);
+    });
+    el.appendChild(band);
+  }
+  document.getElementById("tasks-prov").innerHTML = `<span>O*NET 31.0 Task Statements + Task Ratings · ${o.soc} · ${o.tasks.length} rated tasks</span><span>band = most common FT category</span><span class="flag">tags: draft, 0 reviewed</span>`;
+}
+
+/* ---------- stacked rows helper (family, ladder) ---------- */
+function stackedRows(el, rows, opts = {}) {
+  el.innerHTML = "";
+  const W = Math.max(300, el.clientWidth), narrow = W < 560;
+  const labW = narrow ? 0 : 250, rowH = 26, gapH = narrow ? 22 : 10, headH = 26, m = { t: 4, r: 8, b: 22 };
+  let yy = m.t; const lay = [];
+  rows.forEach(r => { if (r.head) { lay.push({ ...r, y: yy + (lay.length ? 10 : 0) }); yy += headH + (lay.length > 1 ? 10 : 0); } else { lay.push({ ...r, y: yy + (narrow ? gapH - 4 : 0) }); yy += rowH + gapH; } });
+  const H = yy + m.b;
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", opts.aria || "stacked bars");
+  hatchDefs(svg);
+  const x = d3.scaleLinear().domain([0, 1]).range([labW, W - m.r]);
+  [0, .25, .5, .75, 1].forEach(v => {
+    svg.append("line").attr("x1", x(v)).attr("x2", x(v)).attr("y1", m.t).attr("y2", H - m.b).attr("stroke", "var(--grid)");
+    svg.append("text").attr("x", x(v)).attr("y", H - 6).attr("text-anchor", v === 0 ? "start" : v === 1 ? "end" : "middle").style("font-size", "11px").text(pct(v));
+  });
+  lay.forEach(r => {
+    if (r.head) { svg.append("text").attr("x", 0).attr("y", r.y + 16).style("font-weight", 700).style("fill", "var(--ink)").style("font-size", "12px").style("text-transform", "uppercase").style("letter-spacing", ".05em").text(r.head); return; }
+    const by = r.y + (narrow ? 0 : 0);
+    if (narrow) svg.append("text").attr("x", 0).attr("y", by - 5).style("fill", "var(--ink)").style("font-size", "12px").text(r.label + (r.sub ? " · " + r.sub : ""));
+    else {
+      svg.append("text").attr("x", labW - 10).attr("y", by + (r.sub ? 11 : rowH / 2 + 4)).attr("text-anchor", "end").style("fill", "var(--ink)").style("font-size", "13px").text(r.label);
+      if (r.sub) svg.append("text").attr("x", labW - 10).attr("y", by + 24).attr("text-anchor", "end").style("font-size", "10.5px").style("fill", "var(--ink-3)").text(r.sub);
+    }
+    let acc = 0;
+    PH.forEach((p, i) => {
+      const v = r.vals[i]; if (v <= 0) return;
+      const x0 = x(acc), x1 = x(acc + v); acc += v;
+      const w = Math.max(0, x1 - x0 - 2);
+      svg.append("rect").attr("x", x0 + 1).attr("y", by).attr("width", w).attr("height", rowH).attr("rx", 2)
+        .attr("fill", r.hatch ? `url(#h-${p})` : col(p)).attr("stroke", r.hatch ? col(p) : "none").attr("stroke-width", r.hatch ? 1.2 : 0)
+        .attr("opacity", r.dim ? 0.55 : 1)
+        .on("pointermove", ev => showTip(ev, `<b>${esc(r.label)}</b>${r.sub ? ` <span class="m">${esc(r.sub)}</span>` : ""}<br>${PH_LABEL[p]} ${pct(v, 1)}${r.tipNote ? `<div class="m">${r.tipNote}</div>` : ""}`))
+        .on("pointerleave", hideTip);
+      if (w > 34) svg.append("text").attr("x", x0 + 1 + w / 2).attr("y", by + rowH / 2 + 1).attr("text-anchor", "middle").attr("dominant-baseline", "middle")
+        .style("fill", r.hatch ? "var(--ink)" : "#fff").style("font-size", "11px").style("font-weight", 600).style("pointer-events", "none").style("paint-order", r.hatch ? "stroke" : "normal")
+        .style("stroke", r.hatch ? "var(--surface)" : "none").style("stroke-width", r.hatch ? 3 : 0).text(pct(v));
+    });
+  });
+}
+
+/* ---------- chart 9: family ---------- */
+function drawFamily() {
+  legend(document.getElementById("family-legend"));
+  const rows = [];
+  FAMILY.forEach(([head, socs]) => { rows.push({ head }); socs.forEach(s => { const o = OCC.get(s); if (o) rows.push({ label: SHORT[s] || o.title.replace(" and ", " & "), sub: `${s} · ${o.tasks.length} tasks`, vals: o.p[state.model], tipNote: "O*NET task estimate · " + state.model }); }); });
+  stackedRows(document.getElementById("family-svg"), rows, { aria: "Phase profiles for a family of occupations" });
+  document.getElementById("family-model").textContent = "model: " + state.model;
+}
+
+/* ---------- chart 3: ladder ---------- */
+function noPostings(ids, o) {
+  const n = BY && BY.occupations[o.soc] ? BY.occupations[o.soc].n : 0;
+  ids.forEach(id => { document.getElementById(id).innerHTML = `<div class="loading">${o.title}: ${fmt(n)} LinkedIn postings assigned by title, below the ${BY.summary.min_postings} needed for this chart. Pick another occupation in chart 1, or add title decisions (docs/GATHERING-DATA.md, step 7).</div>`; });
+}
+function drawLadder() {
+  if (!BY) return;
+  const o = OCC.get(state.soc), g = byOcc(state.soc);
+  document.getElementById("ladder-occ").textContent = o.title;
+  document.getElementById("ladder-cov").textContent = `${o.soc} · every-title run: ${pct(BY.summary.assigned / BY.summary.us_rows)} of ${fmt(BY.summary.us_rows)} US postings assigned by title`;
+  legend(document.getElementById("ladder-legend"), `<span style="color:var(--ink-2)"><i class="sw hatch"></i>hatched = posting emphasis</span>`);
+  if (!g) { noPostings(["ladder-svg", "ladder-table"], o); document.getElementById("ladder-prov").innerHTML = ""; return; }
+  const rows = [{ label: "O*NET task estimate", sub: `${o.title} · no seniority`, vals: o.p[state.model], tipNote: "for reference" }];
+  const tbl = [];
+  LEVELS.forEach(L => {
+    const d = g.ladder[L]; if (!d || d.n_postings < BY.summary.min_level) { tbl.push([LEVEL_LABEL[L], d ? d.n_postings : 0, null]); return; }
+    rows.push({ label: LEVEL_LABEL[L], sub: `${fmt(d.n_postings)} postings · ${fmt(d.n_mentions)} diagnostic mentions`, vals: PH.map(p => d.profile[p]), hatch: true, dim: L === "unmarked", tipNote: "posting emphasis, LinkedIn Jan 2024" });
+    tbl.push([LEVEL_LABEL[L], d.n_postings, PH.map(p => d.profile[p])]);
+  });
+  stackedRows(document.getElementById("ladder-svg"), rows, { aria: "Posting emphasis by seniority level" });
+  document.getElementById("ladder-table").innerHTML = `<table><tr><th>Level</th><th>Postings</th>${PH.map(p => `<th>${PH_LABEL[p]}</th>`).join("")}</tr>` +
+    tbl.map(r => `<tr><td>${r[0]}</td><td>${fmt(r[1])}</td>${r[2] ? r[2].map(v => `<td>${pct(v, 1)}</td>`).join("") : `<td colspan="6" style="text-align:left;color:var(--ink-3)">fewer than ${BY.summary.min_level} postings, not drawn</td>`}</tr>`).join("") + "</table>";
+  document.getElementById("ladder-prov").innerHTML = `<span>LinkedIn (asaniczka, ODC-By) · ${g.dates.join(" to ")} · US · ${fmt(g.n)} postings assigned to ${o.soc} by title, after dedup (${fmt(g.text_dups)} text repeats removed)</span><span>level read from title words (Junior, II, Senior, Staff…)</span><span>${pct(g.diagnostic_mentions / g.phrase_mentions)} of skill mentions phase-diagnostic</span><span class="flag">phrase tags: draft rules</span>`;
+}
+
+/* ---------- chart 5: requirement stack ---------- */
+function drawStack() {
+  if (!BY) return;
+  const o = OCC.get(state.soc), g = byOcc(state.soc);
+  document.getElementById("stack-title").textContent = o.title;
+  if (!g) { document.getElementById("stack-n").textContent = ""; noPostings(["stack-panels"], o); document.getElementById("stack-prov").innerHTML = ""; return; }
+  document.getElementById("stack-n").textContent = `${o.soc} · ${fmt(g.with_skills)} postings`;
+  const panels = [["skills", "Skills and methods"], ["tools", "Tools and platforms"], ["knowledge", "Knowledge"], ["languages", "Languages"], ["credentials", "Credentials"]];
+  const el = document.getElementById("stack-panels"); el.innerHTML = "";
+  const all = panels.map(([k, lab]) => [lab, g.stack[k] || []]).concat([["Not in the lexicon yet", g.unmatched_top]]).filter(p => p[1].length);
+  const mx = d3.max(all.flatMap(p => p[1].map(i => i.share))) || 1;
+  all.forEach(([lab, items]) => {
+    const p = document.createElement("div"); p.className = "panel";
+    p.innerHTML = `<h3>${lab}</h3>`;
+    const rk = document.createElement("div"); rk.className = "rank";
+    items.slice(0, 10).forEach(it => {
+      const r = document.createElement("div"); r.className = "r";
+      const c = it.phase === "neutral" ? "var(--neutral-bar)" : col(it.phase);
+      r.innerHTML = `<span class="lab"><i style="width:${it.share / mx * 100}%;background:${c};opacity:${it.phase === "neutral" ? .55 : .35}"></i><span></span></span><span class="v">${pct(it.share)}</span>`;
+      r.querySelector(".lab span").textContent = it.label;
+      r.addEventListener("pointermove", ev => showTip(ev, `<b>${esc(it.label)}</b><br>${pct(it.share, 1)} of postings<div class="m">phrase "${esc(it.phrase)}" · ${it.phase === "neutral" ? "phase-neutral" : PH_LABEL[it.phase]}${it.id ? " · lexicon " + it.id : " · not in lexicon"}</div>`));
+      r.addEventListener("pointerleave", hideTip);
+      rk.appendChild(r);
+    });
+    p.appendChild(rk); el.appendChild(p);
+  });
+  document.getElementById("stack-prov").innerHTML = `<span>skill lists: the dataset's model-extracted job_skills</span><span>classes: Skills Lexicon (3,754 entries, main 0ba8e0c2) · ${pct(g.lexicon_matched_mentions / g.phrase_mentions)} of mentions matched an entry</span><span>required vs preferred: not separated in this source</span><span class="flag">lexicon: 0 reviewed entries</span>`;
+}
+
+/* ---------- chart 4: ridgeline ---------- */
+function drawExp() {
+  const ys = PO.gsearch.years, el = document.getElementById("exp-svg"); el.innerHTML = "";
+  const W = Math.max(300, el.clientWidth), narrow = W < 600;
+  const years = ["2022", "2023", "2024", "2025"].filter(y => ys[y] && ys[y].n_with_years);
+  const rowH = 62, m = { t: 30, r: narrow ? 10 : 250, b: 30, l: narrow ? 46 : 70 };
+  const H = m.t + years.length * rowH + m.b + (narrow ? years.length * 16 : 0);
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "Distribution of minimum years of experience by year");
+  const x = d3.scaleLinear().domain([0, 16]).range([m.l, W - m.r]);
+  const maxShare = d3.max(years.flatMap(y => ys[y].hist.map(v => v / ys[y].n_with_years)));
+  const hgt = d3.scaleLinear().domain([0, maxShare]).range([0, rowH * 1.25]);
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickValues([0, 1, 2, 3, 5, 8, 10, 15, 16]).tickFormat(d => d === 16 ? "15+" : d));
+  svg.append("text").attr("x", (m.l + W - m.r) / 2).attr("y", H - 2).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text("minimum years of experience asked for");
+  svg.append("line").attr("x1", x(2)).attr("x2", x(2)).attr("y1", m.t - 16).attr("y2", H - m.b).attr("stroke", "var(--ink-3)").attr("stroke-dasharray", "3 3");
+  svg.append("text").attr("x", x(2) + 4).attr("y", m.t - 18).style("font-size", "11px").text("2 years");
+  years.forEach((yr, i) => {
+    const d = ys[yr], base = m.t + (i + 1) * rowH + (narrow ? i * 16 : 0);
+    const pts = d.hist.map((v, k) => [k + 0.5, v / d.n_with_years]);
+    const area = d3.area().x(p => x(p[0])).y0(base).y1(p => base - hgt(p[1])).curve(d3.curveMonotoneX);
+    svg.append("path").attr("d", area([[0, 0], ...pts, [16.5, 0]])).attr("fill", "var(--accent)").attr("fill-opacity", 0.22).attr("stroke", "var(--accent)").attr("stroke-width", 2);
+    svg.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", base).attr("y2", base).attr("stroke", "var(--rule)");
+    const label = yr + (d.months && (d.months[0].slice(5) !== "01" || d.months[1].slice(5) !== "12") ? ` (${d.months[0].slice(5)}–${d.months[1].slice(5)})` : "");
+    svg.append("text").attr("x", m.l - 8).attr("y", base - 4).attr("text-anchor", "end").style("fill", "var(--ink)").style("font-weight", 600).text(yr);
+    const ann = `${fmt(d.n_with_years)} postings · median ${d.median} yrs · ${pct(d.share_2plus)} ask 2+`;
+    const ann2 = d.entry_n ? `entry-level titles asking 2+: ${pct(d.entry_share_2plus)} (n=${d.entry_n})` : "";
+    if (narrow) { svg.append("text").attr("x", m.l).attr("y", base + 13).style("font-size", "10.5px").text(ann + (d.months ? ` · ${d.months[0]} to ${d.months[1]}` : "")); }
+    else {
+      svg.append("text").attr("x", W - m.r + 14).attr("y", base - 22).style("fill", "var(--ink)").style("font-size", "12px").text(ann);
+      svg.append("text").attr("x", W - m.r + 14).attr("y", base - 7).style("font-size", "11px").text(ann2 + (d.months ? ` · ${d.months[0]}–${d.months[1]}` : ""));
+    }
+    svg.append("rect").attr("x", m.l).attr("y", base - rowH).attr("width", W - m.r - m.l).attr("height", rowH).attr("fill", "transparent")
+      .on("pointermove", ev => { const [mx] = d3.pointer(ev); const k = Math.max(0, Math.min(16, Math.floor(x.invert(mx)))); showTip(ev, `<b>${yr}</b> · ${k === 16 ? "over 15" : k} year${k === 1 ? "" : "s"}<br>${pct(d.hist[k] / d.n_with_years, 1)} of postings that state a minimum<div class="m">${ann2}</div>`); })
+      .on("pointerleave", hideTip);
+  });
+  const all = PO.gsearch;
+  document.getElementById("exp-prov").innerHTML = `<span>Google Jobs via Luke Barousse (Apache 2.0) · ${all.dates.join(" to ")} · ${fmt(all.n)} data-analyst postings after dedup by job id</span><span>${pct(years.reduce((a, y) => a + ys[y].n_with_years, 0) / all.n)} state a minimum in "N years … experience" form</span><span>first stated number taken</span>`;
+  if (BY) {
+    const L = ["entry", "mid", "senior", "lead", "unmarked"];
+    document.getElementById("exp-table").innerHTML = `<table><tr><th>Title</th>${L.map(l => `<th>${LEVEL_LABEL[l]}</th>`).join("")}<th>All · median yrs</th></tr>` +
+      FEATURED.map(([soc, lab]) => [lab, byOcc(soc)]).filter(r => r[1]).map(([lab, v]) => `<tr><td>${lab}</td>${L.map(l => { const e = v.experience[l]; return `<td>${e && e.n >= 20 ? pct(e.share_2plus) + ` <span style="color:var(--ink-3)">(${fmt(e.n)})</span>` : ""}</td>`; }).join("")}<td>${v.experience.all ? v.experience.all.median : ""}</td></tr>`).join("") + "</table>";
+    const E = (g, l) => byOcc({ "software-developer": "15-1252.00", "accountant": "13-2011.00" }[g]).experience[l];
+    document.querySelectorAll('[data-k="entry-sw"]').forEach(e => e.textContent = `${pct(E("software-developer", "entry").share_2plus)} (n=${E("software-developer", "entry").n})`);
+    document.querySelectorAll('[data-k="entry-acc"]').forEach(e => e.textContent = `${pct(E("accountant", "entry").share_2plus)} (n=${fmt(E("accountant", "entry").n)})`);
+    const lx = FEATURED.map(f => byOcc(f[0])).filter(Boolean).map(v => v.lexicon_matched_mentions / v.phrase_mentions);
+    document.querySelectorAll('[data-k="lex-range"]').forEach(e => e.textContent = `${pct(d3.min(lx))}–${pct(d3.max(lx))}`);
+  }
+  document.getElementById("exp-note").textContent = `Entry-level titles are rare in this series (${fmt(all.levels.entry || 0)} of ${fmt(all.n)}), so the entry-level share moves on small numbers.`;
+}
+
+/* ---------- chart 6: bump ---------- */
+function drawBump() {
+  const T = PO.gsearch.tokens, periods = Object.keys(T).sort(), el = document.getElementById("bump-svg"); el.innerHTML = "";
+  const N = 12;
+  const overall = d3.rollup(periods.flatMap(p => Object.entries(T[p].share)), v => d3.sum(v, d => d[1]), d => d[0]);
+  const toks = [...overall].sort((a, b) => b[1] - a[1]).slice(0, N).map(d => d[0]);
+  const rank = {};
+  periods.forEach(p => { const order = toks.slice().sort((a, b) => (T[p].share[b] || 0) - (T[p].share[a] || 0)); order.forEach((t, i) => { (rank[t] ||= {})[p] = i + 1; }); });
+  const W = Math.max(300, el.clientWidth), narrow = W < 560, m = { t: 20, r: narrow ? 74 : 110, b: 46, l: narrow ? 74 : 110 }, H = m.t + N * 26 + m.b;
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "Rank of data analyst tools by half year");
+  const x = d3.scalePoint().domain(periods).range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain([1, N]).range([m.t, H - m.b]);
+  periods.forEach(p => {
+    svg.append("line").attr("x1", x(p)).attr("x2", x(p)).attr("y1", m.t - 8).attr("y2", H - m.b + 6).attr("stroke", "var(--grid)");
+    svg.append("text").attr("x", x(p)).attr("y", H - m.b + 22).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink)").text(p.replace("-", " "));
+    svg.append("text").attr("x", x(p)).attr("y", H - m.b + 36).attr("text-anchor", "middle").style("font-size", "10px").style("fill", "var(--ink-3)").text("n=" + fmt(T[p].n));
+  });
+  const name = t => t.replace("_", " ");
+  const line = d3.line().x(d => x(d[0])).y(d => y(d[1]));
+  const gs = toks.map(t => {
+    const g = svg.append("g").attr("class", "bl");
+    const pts = periods.map(p => [p, rank[t][p]]);
+    g.append("path").attr("d", line(pts)).attr("fill", "none").attr("stroke", "var(--ink-3)").attr("stroke-width", 2).attr("class", "ln");
+    pts.forEach(([p, r]) => g.append("circle").attr("cx", x(p)).attr("cy", y(r)).attr("r", 4.5).attr("fill", "var(--ink-3)").attr("stroke", "var(--surface)").attr("stroke-width", 2));
+    g.append("text").attr("x", x(periods[0]) - 10).attr("y", y(rank[t][periods[0]]) + 4).attr("text-anchor", "end").style("fill", "var(--ink)").text(`${rank[t][periods[0]]}. ${name(t)}`);
+    g.append("text").attr("x", x(periods.at(-1)) + 10).attr("y", y(rank[t][periods.at(-1)]) + 4).style("fill", "var(--ink)").text(`${rank[t][periods.at(-1)]}. ${name(t)}`);
+    g.append("path").attr("d", line(pts)).attr("fill", "none").attr("stroke", "transparent").attr("stroke-width", 14)
+      .on("pointermove", ev => {
+        gs.forEach(o => o.attr("opacity", o === g ? 1 : 0.22)); g.selectAll(".ln").attr("stroke", "var(--accent)"); g.selectAll("circle").attr("fill", "var(--accent)");
+        showTip(ev, `<b>${name(t)}</b><br>${periods.map(p => `${p}: #${rank[t][p]} · ${pct(T[p].share[t] || 0)}`).join("<br>")}`);
+      })
+      .on("pointerleave", () => { gs.forEach(o => o.attr("opacity", 1)); g.selectAll(".ln").attr("stroke", "var(--ink-3)"); g.selectAll("circle").attr("fill", "var(--ink-3)"); hideTip(); });
+    return g;
+  });
+  document.getElementById("bump-prov").innerHTML = `<span>tokens: the dataset's own description_tokens keyword list</span><span>top ${N} tools by summed share, ranked among themselves per period</span><span class="flag">2024 H2 is thin: no August, little Sept–Nov</span>`;
+}
+
+/* ---------- chart 2: dumbbell ---------- */
+function drawShift() {
+  const c = PO.gsearch.cues, el = document.getElementById("shift-svg"); el.innerHTML = "";
+  const norm = s => { const t = d3.sum(PH, p => s[p]); return Object.fromEntries(PH.map(p => [p, s[p] / t])); };
+  const a = norm(c["2023"].share), b = norm(c["2025"].share);
+  document.getElementById("shift-legend").innerHTML = `<span><i class="sw" style="border-radius:50%;border:2px solid var(--ink-2);background:var(--surface);box-sizing:border-box"></i>2023 (n=${fmt(c["2023"].n)})</span><span><i class="sw" style="border-radius:50%;background:var(--ink-2)"></i>Jan–Apr 2025 (n=${fmt(c["2025"].n)})</span><span style="color:var(--ink-3)">row colour = phase</span>`;
+  const W = Math.max(300, el.clientWidth), m = { t: 10, r: 60, b: 28, l: 104 }, rowH = 34, H = m.t + PH.length * rowH + m.b;
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", "Change in phase cue share for data analyst postings");
+  const lo = Math.floor(d3.min(PH, p => Math.min(a[p], b[p])) * 20) / 20, hi = Math.ceil(d3.max(PH, p => Math.max(a[p], b[p])) * 20) / 20;
+  const x = d3.scaleLinear().domain([Math.max(0, lo - 0.02), hi]).range([m.l, W - m.r]);
+  svg.append("g").attr("class", "grid").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickSize(-(H - m.b - m.t)).tickFormat("")).call(g => g.select(".domain").remove());
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(".0%")));
+  PH.forEach((p, i) => {
+    const yy = m.t + i * rowH + rowH / 2;
+    svg.append("text").attr("x", m.l - 12).attr("y", yy + 4).attr("text-anchor", "end").style("fill", "var(--ink)").style("font-weight", 600).text(PH_LABEL[p]);
+    svg.append("line").attr("x1", x(a[p])).attr("x2", x(b[p])).attr("y1", yy).attr("y2", yy).attr("stroke", col(p)).attr("stroke-width", 3);
+    svg.append("circle").attr("cx", x(a[p])).attr("cy", yy).attr("r", 6).attr("fill", "var(--surface)").attr("stroke", col(p)).attr("stroke-width", 2.5);
+    svg.append("circle").attr("cx", x(b[p])).attr("cy", yy).attr("r", 6.5).attr("fill", col(p)).attr("stroke", "var(--surface)").attr("stroke-width", 2);
+    const dpp = (b[p] - a[p]) * 100;
+    svg.append("text").attr("x", Math.max(x(a[p]), x(b[p])) + 12).attr("y", yy + 4).style("font-size", "11.5px").text(`${dpp >= 0 ? "+" : "−"}${Math.abs(dpp).toFixed(1)} pts`);
+    svg.append("rect").attr("x", m.l).attr("y", yy - rowH / 2).attr("width", W - m.l - m.r).attr("height", rowH).attr("fill", "transparent")
+      .on("pointermove", ev => showTip(ev, `<b>${PH_LABEL[p]}</b><br>2023: ${pct(a[p], 1)} of cue hits (${pct(c["2023"].share[p])} of postings)<br>2025: ${pct(b[p], 1)} of cue hits (${pct(c["2025"].share[p])} of postings)`))
+      .on("pointerleave", hideTip);
+  });
+  document.getElementById("shift-prov").innerHTML = `<span>Google Jobs data-analyst postings · description text scanned on the cluster, no text kept</span><span>cue phrases: draft regexes in cluster/postings.py</span><span class="flag">cue lists unreviewed; noisy by design</span>`;
+  const drop = PH.every(p => c["2025"].share[p] < c["2023"].share[p]);
+  const L23 = c["2023"].len_median, L25 = c["2025"].len_median;
+  const lenTxt = L23 && L25 ? ` The median description also went from ${fmt(L23)} to ${fmt(L25)} characters, ${L25 < L23 * 0.9 ? "so shorter text explains much of the drop" : "so length alone does not explain the drop"}.` : "";
+  document.getElementById("shift-note").textContent = drop ? `Every phase's raw hit rate fell from 2023 to 2025 (for example Check ${pct(c["2023"].share.check)} → ${pct(c["2025"].share.check)} of postings).${lenTxt} That is why the chart shows each phase's share of all hits instead of raw rates. Shifts of a few points on noisy cue lists are not evidence of anything yet.` : "";
+}
+
+/* ---------- chart 8: AI coverage overlay ---------- */
+function drawAI() {
+  const o = OCC.get(state.soc); if (!o || !o.c) return;
+  const tot = o.p[state.model], cov = o.c[state.model];
+  document.getElementById("ai-title").textContent = o.title;
+  document.getElementById("ai-total").textContent = `${pct(d3.sum(cov), 1)} of estimated effort in covered tasks · ${o.tasks.filter(t => t[9] > 0).length} of ${o.tasks.length} tasks covered`;
+  legend(document.getElementById("ai-legend"), `<span><i class="sw" style="background:var(--ink-2)"></i>solid = tasks with observed AI use</span><span><i class="sw" style="background:var(--ink-2);opacity:.25"></i>pale = no observed use</span>`);
+  const el = document.getElementById("ai-svg"); el.innerHTML = "";
+  const W = Math.max(300, el.clientWidth), H = 250, m = { t: 14, r: 8, b: 44, l: 40 };
+  const svg = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`).attr("role", "img").attr("aria-label", `AI coverage by phase for ${o.title}`);
+  const ymax = Math.min(1, Math.ceil(d3.max(tot) * 10 + 0.5) / 10);
+  const x = d3.scaleBand().domain(PH).range([m.l, W - m.r]).paddingInner(0.35).paddingOuter(0.15);
+  const y = d3.scaleLinear().domain([0, ymax]).range([H - m.b, m.t]);
+  svg.append("g").attr("class", "grid").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat("")).call(g => g.select(".domain").remove());
+  svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format(".0%"))).call(g => g.select(".domain").remove()).call(g => g.selectAll("line").remove());
+  const xa = svg.append("g").attr("transform", `translate(0,${H - m.b})`);
+  xa.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("stroke", "var(--rule)");
+  PH.forEach((p, i) => {
+    const cx = x(p) + x.bandwidth() / 2;
+    xa.append("text").attr("x", cx).attr("y", 17).attr("text-anchor", "middle").style("font-weight", 600).style("fill", "var(--ink)").text(PH_LABEL[p]);
+    xa.append("text").attr("x", cx).attr("y", 32).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-3)").text(PH_SW[p]);
+    const bx = x(p), bw = x.bandwidth();
+    svg.append("path").attr("d", topRounded(bx, y(tot[i]), bw, y(0) - y(tot[i]), 4)).attr("fill", col(p)).attr("opacity", 0.25);
+    if (cov[i] > 0) svg.append("rect").attr("x", bx).attr("y", y(cov[i]) + (tot[i] - cov[i] > 0.004 ? 1 : 0)).attr("width", bw).attr("height", Math.max(0, y(0) - y(cov[i]) - 1)).attr("fill", col(p));
+    if (tot[i] > 0.02) svg.append("text").attr("x", cx).attr("y", y(tot[i]) - 6).attr("text-anchor", "middle").style("font-size", "11px").style("fill", "var(--ink-2)").text(tot[i] > 0 ? pct(cov[i] / tot[i]) + " covered" : "");
+    svg.append("rect").attr("x", bx - 3).attr("y", m.t).attr("width", bw + 6).attr("height", H - m.b - m.t).attr("fill", "transparent")
+      .on("pointermove", ev => showTip(ev, `<b>${PH_LABEL[p]}</b><br>${pct(tot[i], 1)} of estimated effort<br>${pct(cov[i], 1)} in tasks with observed AI use (${tot[i] > 0 ? pct(cov[i] / tot[i]) : "–"} of the phase)<div class="m">coverage weighted by the Index's task value</div>`))
+      .on("pointerleave", hideTip);
+  });
+  const fam = document.getElementById("ai-family"); fam.innerHTML = "";
+  const list = FAMILY.flatMap(f => f[1]).map(s => OCC.get(s)).filter(Boolean).map(o2 => [o2, d3.sum(o2.c[state.model])]).sort((a, b) => b[1] - a[1]);
+  const mx = d3.max(list, d => d[1]) || 1;
+  list.forEach(([o2, v]) => {
+    const r = document.createElement("div"); r.className = "r";
+    r.innerHTML = `<span class="lab"><i style="width:${v / mx * 100}%;background:var(--accent);opacity:${o2.soc === state.soc ? .55 : .25}"></i><span></span></span><span class="v">${pct(v)}</span>`;
+    r.querySelector(".lab span").textContent = (SHORT[o2.soc] || o2.title) + (o2.soc === state.soc ? "  ◂" : "");
+    fam.appendChild(r);
+  });
+}
+
+/* ---------- summary gap sentence ---------- */
+function summaryGap() {
+  if (!BY) return;
+  const li = document.getElementById("sum-gap");
+  const parts = [];
+  FEATURED.forEach(([soc, lab]) => {
+    const v = byOcc(soc); if (!v) return;
+    const est = OCC.get(soc).p.ordinal;
+    let best = null;
+    PH.forEach((p, i) => { const d = v.profile[p] - est[i]; if (!best || Math.abs(d) > Math.abs(best[1])) best = [p, d, est[i], v.profile[p]]; });
+    parts.push({ g: lab, best });
+  });
+  parts.sort((a, b) => Math.abs(b.best[1]) - Math.abs(a.best[1]));
+  const top = parts.slice(0, 3).map(({ g, best: [p, d, e, s] }) => `${g.slice(1, 2) === g.slice(1, 2).toLowerCase() ? g.charAt(0).toLowerCase() + g.slice(1) : g}: ${PH_LABEL[p]} is ${pct(e)} of the task estimate but ${pct(s)} of posting emphasis`);
+  li.innerHTML = `<b>The layers disagree, and that is the interesting part.</b> The biggest gaps: ${top.join("; ")}. Some of that is the method (posting skills skew to nameable tools and tasks, and O*NET's software task list leans on conferring and supervising). Some may be real. This first pass can't yet tell which.`;
+}
+
+/* ---------- wiring ---------- */
+function drawAll() { drawProfile(); drawCal(); drawTasks(); drawFamily(); drawAI(); drawLadder(); drawStack(); if (PO) { drawExp(); drawBump(); drawShift(); } }
+function setSoc(soc) {
+  if (!OCC.has(soc)) return; state.soc = soc;
+  document.querySelectorAll("#feat-chips .chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.soc === soc));
+  document.getElementById("occ-search").value = ""; drawProfile(); drawTasks(); drawAI(); drawLadder(); drawStack();
+}
+function init() {
+  OCC = new Map(ON.occupations.map(o => [o.soc, o]));
+  document.getElementById("occ-list").innerHTML = ON.occupations.map(o => `<option value="${esc(o.title)} (${o.soc})"></option>`).join("");
+  const fc = document.getElementById("feat-chips");
+  FEATURED.forEach(([s, lab]) => { const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.soc = s; b.textContent = lab; b.setAttribute("aria-pressed", s === state.soc); b.onclick = () => setSoc(s); fc.appendChild(b); });
+  document.getElementById("occ-search").addEventListener("change", e => { const m = e.target.value.match(/\((\d\d-\d{4}\.\d\d)\)\s*$/); if (m) setSoc(m[1]); });
+  document.querySelectorAll("#model-seg button").forEach(b => b.onclick = () => {
+    state.model = b.dataset.m; document.querySelectorAll("#model-seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    drawProfile(); drawFamily(); drawAI(); drawLadder();
+  });
+  summaryGap();
+  drawAll();
+  let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(drawAll, 150); });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);
+  new MutationObserver(drawAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+}
+Promise.all([fetch("data/onet.json").then(r => r.json()), fetch("data/postings.json").then(r => r.json()), fetch("data/by-occupation.json").then(r => r.json())])
+  .then(([a, b, c]) => { ON = a; PO = b; BY = c; init(); })
+  .catch(e => { document.querySelectorAll(".loading").forEach(l => l.textContent = "Could not load the data files: " + e.message); });
+})();
+</script>
