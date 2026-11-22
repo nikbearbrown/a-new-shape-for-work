@@ -1,6 +1,6 @@
 # downloaded inputs: scripts/fetch_sources.sh recreates them
-source/
+/source/
 # intermediate outputs: the scripts recreate them (per-posting extracts never leave this machine)
-data/
+/data/
 __pycache__/
 .DS_Store
