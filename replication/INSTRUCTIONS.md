@@ -7,7 +7,7 @@
 ## 1. Independence rules (read first)
 
 - **Work alone.** Do not read, search for, or ask for any other model's answers, including Claude's. Do not ask another AI to do any part of this for you, and do not contact the other agents doing it.
-- **Read only this folder** (`replication/`) and the public sources it names (the O*NET database, for way A). The rest of the repository holds a rule-based draft of the same judgments: `tags/`, `data/`, `page/`, `docs/`, `scripts/`, `cluster/` and the top-level README. **Don't open them**, and don't open `replication/coordinator/`, which turns that draft into answers.
+- **Read only this folder** (`replication/`) and the public sources it names (the O*NET database, for way A). The rest of the repository holds a rule-based draft of the same judgments and results built from it: `tags/`, `data/`, `research-data/`, `paper/`, `page/`, `docs/`, `scripts/`, `cluster/` and the top-level README. **Don't open them**, or any folder added later outside `replication/`, and don't open `replication/coordinator/`, which turns that draft into answers.
 - If you come across a folder or file from another run (any `shape-*` folder that isn't yours, any `answers*.jsonl` or `reply-*.json` you didn't write), **don't open it.**
 - Don't edit the repository, don't push to GitHub (not even your hand-in), and don't publish anything.
 
