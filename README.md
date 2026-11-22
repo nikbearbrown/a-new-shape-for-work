@@ -99,8 +99,17 @@ python3 -I scripts/build_page_data.py
 
 - **Phase tags need review.** The most consequential one: O*NET's "Analyzing Data or Information" is tagged Understand, which sends half of a data scientist's work there.
 - **Title decisions need review.** `tags/title-decisions.tsv` holds six draft choices (data analyst, project manager, QA engineer, QA analyst, customer service representative, and account executive excluded).
-- **Rights are not decided.** No licence file yet. The paper's authorship and the repository's licence are the author's call.
+- **Paper authorship is not decided.** The repository's licence is (see below).
 - **Open for collaborators.** See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Licence
+
+Copyright (c) 2026 Humanitarians AI Incorporated.
+
+- **Code** (`scripts/`, `cluster/`, `page/index.html`): MIT, in [LICENSE](LICENSE).
+- **Data, tags, documentation and screenshots** (`tags/`, `page/data/`, `docs/`, the Markdown files): CC BY 4.0, in [LICENSE-CC-BY.md](LICENSE-CC-BY.md).
+
+The data are built from the sources below, and their attribution terms apply too.
 
 ## Data credits
 

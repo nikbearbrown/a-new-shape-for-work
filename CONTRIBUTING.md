@@ -34,4 +34,4 @@ Fork, branch, and open a pull request that says what you changed and how you che
 
 ## Licence
 
-No licence has been chosen yet. Until one is added, open an issue before starting a large piece of work.
+Code is MIT ([LICENSE](LICENSE)); data, tags, documentation and screenshots are CC BY 4.0 ([LICENSE-CC-BY.md](LICENSE-CC-BY.md)). By opening a pull request you agree that your contribution is licensed the same way.
