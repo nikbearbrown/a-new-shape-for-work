@@ -1,6 +1,6 @@
 # Method
 
-How the prototype turns O*NET ratings, job postings and AI-use data into a job's shape, and where each step is weak. The design brief behind it is [job-shape-brief.md](job-shape-brief.md).
+How the prototype turns O*NET ratings, job postings and AI-use data into a job's shape, and where each step is weak. The [rough manuscript](../paper/manuscript.md) interprets the pilot results. See also the [original design brief](job-shape-brief.md) and [downloadable tables](../research-data/).
 
 ## Three layers, kept apart
 
@@ -8,7 +8,7 @@ How the prototype turns O*NET ratings, job postings and AI-use data into a job's
 |---|---|---|---|
 | Activity | What does the work consist of, and how often? | O*NET 31.0 task statements and ratings | estimated share of effort |
 | Emphasis | What do employers ask for? | job postings (LinkedIn Jan 2024; Google Jobs 2022–2025 for data analysts) | share of phase-diagnostic skill mentions |
-| AI overlay | Which of the work do people already bring to AI? | Anthropic Economic Index task coverage | share of estimated effort in covered tasks |
+| AI overlay | Which of the work do people already bring to AI? | Anthropic Economic Index task coverage | task penetration weighted by the modeled activity index |
 
 The charts never add these together. The interesting result is usually the gap between them.
 
@@ -61,7 +61,7 @@ Postings are deduplicated twice: same company, title and location; then the same
 
 The Economic Index file gives one value per O*NET task statement. It is 0 for most tasks. It is positive when a task is judged LLM-feasible (Eloundou et al.) and shows enough work-related Claude use in the August and November 2025 samples, with automated use weighted fully and augmentative use at half. It joins to 18,680 of 18,838 O*NET 31.0 task statements on lower-cased text.
 
-Covered effort for a phase = Σ task weight × phase share × coverage. The paper behind the file weights tasks by time share to get "observed exposure"; this page uses its own effort model, so its totals are not the paper's numbers.
+The overlay sums task weight × phase share × fractional penetration for each phase and divides by the occupation's total task weight. A positive-score badge counts tasks, whereas the index weights their scores. Unmatched task scores currently contribute zero to the numerator; a zero index value does not establish absence of use. The source report applies its own time-share weights, so these results are not its exposure estimates.
 
 ## Where it breaks
 

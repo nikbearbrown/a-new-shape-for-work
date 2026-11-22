@@ -1,18 +1,20 @@
 # A New Shape for Work
 
-**How AI is Affecting Jobs**
+**What jobs involve, what employers advertise, and where AI use is visible**
 
-Data, code and a working prototype for a paper on where a job's work sits, what employers ask for, and where AI use already shows up. Everything here is a first pass built on 2026-11-21: every effort figure is a model, and every phase tag is an unreviewed draft.
+[Read the rough first draft](paper/manuscript.md) · [Help with the paper](CONTRIBUTING.md) · [Download the research data](research-data/)
 
-**Collaborators are welcome.** The most useful help now is reviewing the draft judgments in `tags/` for occupations you know. [CONTRIBUTING.md](CONTRIBUTING.md) lists the tasks, most of which need no special access.
+*A New Shape for Work* compares three ways of describing an occupation: how its work activities are rated, what employers emphasize in ads, and where published evidence of Claude use shows up. The prototype is a first pass. Its activity shares are modeled, not measured hours, and its phase tags are draft judgments.
+
+**We're inviting collaborators.** Review one claim, check a source, bring an example from an occupation you know, or help reproduce a result. You don't need cluster access to contribute to the paper.
 
 ## Executive summary
 
 - **The prototype works end to end on real data.** O*NET 31.0 task ratings give an estimated effort profile across six phases of work (understand, plan, produce, check, sustain, coordinate) for all 911 occupations O*NET rates. Job postings give a second layer: what employers ask for. The Anthropic Economic Index gives a third: which tasks people already bring to Claude.
-- **The layers disagree, and that is the paper's opening.** QA analysts and testers: Check is 32% of the task estimate but 63% of posting emphasis. Software developers: Coordinate is 36% of the task estimate but 8% of postings. Electricians: Sustain is 14% against 49%.
-- **AI use is concentrated.** 35% of software developers' estimated effort sits in tasks with observed Claude use, against 6% for registered nurses and 0% for electricians. 435 of the 911 occupations have no covered task.
-- **The calibration case passes, loosely.** Software developers come out at 16–22% Produce, inside the 15–30% hands-on coding range from time-use studies.
-- **"Every job title" is a data-gathering job, not a modelling one.** The O*NET and AI layers already cover every occupation. The posting layer needs each posting's title mapped to an occupation. Matching against O*NET's 47,839 normalised titles (exact, then longest leading or trailing words) assigned 35% of 1,149,342 US LinkedIn postings to an occupation; 19% had an ambiguous title and 45% matched nothing. 915 occupations received postings and 429 have the 50 needed for charts. The most common unassigned titles ("manager", "assistant manager", "store manager", "physician") are listed for review. [docs/GATHERING-DATA.md](docs/GATHERING-DATA.md) is the step-by-step.
+- **The layers disagree, and that is the paper's opening.** QA analysts and testers: Check is 32% of the task estimate but 63% of posting emphasis. Software developers: Coordinate is 36% of the task estimate but 8% of diagnostic posting mentions. Electricians: Sustain is 14% against 49%.
+- **The AI overlay varies by occupation.** Weighting the activity index by published task penetration yields 35% for software developers, 6% for registered nurses, and 0% in this model for electricians. These are index values, not hours spent using AI. A zero is not proof of no AI use.
+- **Weighting changes the estimate.** The modeled Produce share for software developers ranges from 16% to 22% across three weighting choices. Hands-on coding time is a different measure and does not validate this index.
+- **"Every job title" is a data-gathering job, not a modelling one.** The activity index covers 911 rated occupations; the AI overlay depends on matched task scores. The posting layer needs each posting's title mapped to an occupation. Matching against O*NET's 47,839 normalised titles (exact, then longest leading or trailing words) assigned 35% of 1,149,342 US LinkedIn postings to an occupation; 19% had an ambiguous title and 45% matched nothing. 915 occupation codes received postings; 429 met the 50-ad chart cutoff. Of the 911 rated occupations, 409 met that cutoff and can be shown side by side. The most common unassigned titles ("manager", "assistant manager", "store manager", "physician") are listed for review. [docs/GATHERING-DATA.md](docs/GATHERING-DATA.md) is the step-by-step.
 
 ## What the page looks like
 
@@ -69,9 +71,10 @@ The prototype is one static page (`page/index.html`). These screenshots show it 
 
 | Path | What it holds |
 |---|---|
+| [paper/](paper/) | Rough manuscript and ways to help review or develop it. |
 | [research-data/](research-data/) | Downloadable activity and posting tables, data sources, licenses, and reproducibility notes. |
-| [page/](page/) | The prototype: `index.html` plus its two data files. Open it through any static server (`python3 -m http.server -d page 8765`). |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | How to help: reviewing tags, deciding titles, the page, the cluster step |
+| [page/](page/) | The prototype: `index.html` plus its three data files. Open it through any static server (`python3 -m http.server -d page 8765`). |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Ways to help write, check, and reproduce the paper |
 | [docs/GATHERING-DATA.md](docs/GATHERING-DATA.md) | How to gather the data and run the analysis for every job title |
 | [docs/METHOD.md](docs/METHOD.md) | The phase frame, the effort models, the posting and AI layers, and where each breaks |
 | [docs/job-shape-brief.md](docs/job-shape-brief.md) | The design brief the prototype was built from (charts, feasibility, build order) |
@@ -100,14 +103,14 @@ python3 -I scripts/build_page_data.py
 
 - **Phase tags need review.** The most consequential one: O*NET's "Analyzing Data or Information" is tagged Understand, which sends half of a data scientist's work there.
 - **Title decisions need review.** `tags/title-decisions.tsv` holds six draft choices (data analyst, project manager, QA engineer, QA analyst, customer service representative, and account executive excluded).
-- **Paper authorship is not decided.** The repository's licence is (see below).
+- **The paper is a working draft.** Its next priorities are review of the phase and title labels, better worker-side evidence, and checks on the headline results. Authorship is not yet decided.
 - **Open for collaborators.** See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Licence
 
 Copyright (c) 2026 Humanitarians AI Incorporated.
 
-- **Code** (`scripts/`, `cluster/`, `page/index.html`): MIT, in [LICENSE](LICENSE).
+- **Code** (`scripts/`, `cluster/`, `page/index.html`, `research-data/export-profiles.py`): MIT, in [LICENSE](LICENSE).
 - **Data, tags, documentation and screenshots** (`tags/`, `page/data/`, `docs/`, the Markdown files): CC BY 4.0, in [LICENSE-CC-BY.md](LICENSE-CC-BY.md).
 
 The data are built from the sources below, and their attribution terms apply too.

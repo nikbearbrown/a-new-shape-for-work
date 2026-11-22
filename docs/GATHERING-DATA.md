@@ -2,6 +2,8 @@
 
 This is the procedure for running the Job Shape analysis on every job title, not just the eight in the prototype. It is written for a person or an agent with this repository on a Mac and an account on Northeastern's Explorer cluster (`ssh explorer`, `/projects/aiskunks`), where the posting archives live. Steps 1–3 and 7 need no cluster access.
 
+To check a number in the [rough manuscript](../paper/manuscript.md), start with the [published tables and source manifest](../research-data/). You do not need Explorer access for the published-data checks. If you find a discrepancy, [report it as a contribution](../CONTRIBUTING.md).
+
 ## What "every job title" means here
 
 The Skills Lexicon does not yet hold a list of job titles. It holds skills, tools, knowledge areas and credentials, and O*NET's skill, knowledge and ability ratings for 894 occupations. Its job-title-to-occupation pilot (`docs/handoff/prompts/06-job-title-pilot.md` in the lexicon) has not been run. So this procedure uses **O*NET's own title tables** as the title list: 1,016 occupation titles, 54,269 alternate titles and 8,189 titles reported by workers, which normalise to 47,839 distinct titles once singular forms of the plural occupation names are added. When the lexicon gains its own title list, add those titles to `scripts/make_title_map.py` and rerun from step 3.

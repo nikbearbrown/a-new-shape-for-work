@@ -1,37 +1,33 @@
-# Contributing
+# Help write A New Shape for Work
 
-This is a first pass at the data behind a paper, *A New Shape for Work: How AI is Affecting Jobs*. Most of what it needs now is people checking judgments, not new code. Every phase tag and title decision in `tags/` is an unreviewed draft, and a reviewed tag is worth more to the paper than a new chart.
+We have a [rough first draft](paper/manuscript.md), a working prototype, and [data you can download](research-data/). We're looking for collaborators who can improve the argument, check the evidence, or tell us where our model of an occupation misses the work. You don't need to code, have cluster access, or review the whole paper to help.
 
-Start with [docs/METHOD.md](docs/METHOD.md) (what the analysis does and where it breaks) and the screenshots in the [README](README.md).
+**If you have an hour:** read one section and [open an issue](https://github.com/nikbearbrown/a-new-shape-for-work/issues/new) with one claim you would keep, change, or qualify. Name the section, explain why, and include a source or example if you have one. For a copy edit, you can also propose the wording directly in a pull request.
 
-## Ways to help
+## Pick a way to help
 
-You can do the first five without any special access: clone the repo, read a TSV, and open a pull request.
-
-| Task | Where | What a good contribution looks like |
+| Contribution | Where to start | What to send |
 |---|---|---|
-| **Review phase tags** for an occupation you know | `tags/dwa-phase-tags.tsv` (2,087 detailed work activities), `tags/iwa-phase-tags.tsv` (332 intermediate) | Change `phase` where it is wrong, put your reason in `note`, set `status` to `reviewed` and your GitHub handle in `reviewed_by`. Rows you checked and left alone count too: mark them reviewed. |
-| **Decide ambiguous job titles** | `tags/title-decisions.tsv`; the list of high-volume unassigned titles is in docs/GATHERING-DATA.md, step 7 | One row per title: the O*NET occupation code it mostly means in job postings (or `-` to exclude it), and why. |
-| **Check the skill-phrase tags** | `tags/skill-phrase-phase-tags.tsv` | Flag phrases that are boilerplate or tagged to the wrong phase. The rules that produce them are `PHRASE_RULES` in `scripts/build_postings.py`. |
-| **Fix the title normaliser** | `cluster/title_norm.py` | Known gap: titles ending in "-ft" or "-pt" (full-time, part-time) are not cleaned, so "sales associate-ft" matches nothing. |
-| **Improve the page** | `page/index.html` | Plain HTML and D3 reading three JSON files; serve `page/` with any static server. After a visible change, run `scripts/take_screenshots.py` so the README stays current. |
-| **Run the posting extraction** | `cluster/`, docs/GATHERING-DATA.md steps 4–6 | Needs an account on Northeastern's Explorer cluster, where the posting archives live. The extractor is plain Python, so it can be adapted to another allow-listed posting dataset. |
+| **Review or write a section** | [Rough manuscript](paper/manuscript.md) | Identify a missing argument, alternative explanation, or claim the data don't support. For a larger addition, open an issue first with a short outline so people can coordinate. |
+| **Check a citation or add literature** | The manuscript's related work and references | Give a primary source link, page or table, and the claim it supports or contradicts. Worker interviews, task diaries, and time-use studies are particularly useful. Tell us which population and years the source covers. |
+| **Review an occupation you know** | [Methods](docs/METHOD.md) and [work-activity tags](tags/dwa-phase-tags.tsv) | Name the occupation and code if known. Pick a task and explain when it belongs in a different phase. For example, analyzing data might help someone decide what to do, or it might be the deliverable. State when your example applies. |
+| **Reproduce a result** | [Data deposit](research-data/) and [gathering guide](docs/GATHERING-DATA.md) | Pick one number or figure. Report the data version, method, numerator and denominator, expected and observed values, and how to reproduce the comparison. Null and negative results are useful. |
+| **Audit title matches or skill phrases** | [Title decisions](tags/title-decisions.tsv), [skill-phrase tags](tags/skill-phrase-phase-tags.tsv) | Give a reason and evidence. If a title means different things in different settings, document the ambiguity rather than forcing a single code. |
+| **Improve the prototype or data tooling** | [Dashboard](page/) and [build instructions](README.md#reproduce-the-prototype) | Explain what a reader or researcher can do better after the change. If it changes a published number, show the old and new numbers and why they differ. |
 
-If you are unsure where to start, open an issue that names an occupation you know well, and review its tags.
+## What makes a review useful
 
-## Rules
+- **Start with a specific claim, file, or row.** Show the evidence, and say what you would change. A short issue is enough; you do not have to submit a patch.
+- **Keep the measures separate.** A modeled activity share is not working time, a share of diagnostic mentions is not a share of ads, and the Claude-based overlay does not measure all AI use or job loss.
+- **Use the review fields.** For a checked tag, add your reason in `note`, mark it `reviewed`, and put your GitHub handle in `reviewed_by` where that field exists. Checked rows that stay unchanged are useful too. Keep unverified suggestions marked `draft`.
+- **Protect the source material.** Do not post raw job ads, job-description text, per-posting rows, or identifiable worker examples. Cite the source and version; submit aggregates and redistributable evidence. See [data credits and rights](research-data/README.md#source-versions-and-rights).
 
-- **Judgments live in `tags/`, each with a reason.** A tag without a reason will not be merged. Leave `status` as `draft` unless you have checked the row yourself.
-- **No posting text in the repo.** Commit counts and shares only, never job-description text or per-posting rows. The cluster jobs are built so that only counts leave the cluster.
-- **Only openly licensed posting data** (CC0, CC BY, ODC-By, MIT, Apache 2.0). Say which dataset and version you used.
-- **Downloaded and intermediate files stay out of git.** `source/` and `data/` are ignored; `scripts/fetch_sources.sh` and the build scripts recreate them.
-- **Label estimates as estimates.** Effort figures are models built from O*NET's ordinal ratings, not measured time, and the page says so on every effort chart.
-- **AI coverage is observed use, not capability or job loss.** Keep that wording wherever the overlay appears.
+## How to submit
 
-## Pull requests
+For a discussion, open an issue with the section or finding, your evidence, and a proposed next step. For an edit, fork, branch, and open a focused pull request. Say what you changed and how you checked it. Keep manuscript, tag, and code changes separate when they can be reviewed independently. If you use an AI-generated answer, verify the citations and claims before submitting it.
 
-Fork, branch, and open a pull request that says what you changed and how you checked it. Keep tag reviews and code changes in separate pull requests. If a change moves a published number, rerun the affected build step and say which figures changed.
+If you want to collaborate on the paper beyond a single contribution, open an issue describing what you'd like to take on. Authorship is not yet decided. Discuss authorship or acknowledgment early if you plan to contribute substantial writing or research; sending an issue or pull request does not settle authorship.
 
 ## Licence
 
-Code is MIT ([LICENSE](LICENSE)); data, tags, documentation and screenshots are CC BY 4.0 ([LICENSE-CC-BY.md](LICENSE-CC-BY.md)). By opening a pull request you agree that your contribution is licensed the same way.
+Code is MIT ([LICENSE](LICENSE)); project data, tags, documentation and screenshots are CC BY 4.0 ([LICENSE-CC-BY.md](LICENSE-CC-BY.md)). Upstream data retains its own terms. By opening a pull request you agree that your contribution is licensed under the applicable project licence.
