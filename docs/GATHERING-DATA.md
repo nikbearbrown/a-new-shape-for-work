@@ -1,6 +1,6 @@
 # Gathering the data for every job title
 
-This is the procedure for running the Job Shape analysis on every job title, not just the eight in the prototype. It is written for a person or an agent with this repository on a Mac and an account on the Explorer cluster (`ssh explorer`, `/projects/aiskunks`).
+This is the procedure for running the Job Shape analysis on every job title, not just the eight in the prototype. It is written for a person or an agent with this repository on a Mac and an account on Northeastern's Explorer cluster (`ssh explorer`, `/projects/aiskunks`), where the posting archives live. Steps 1–3 and 7 need no cluster access.
 
 ## What "every job title" means here
 
@@ -48,7 +48,8 @@ The two tag files are the judgments. Edit them, not the scripts' output: `dwa_ta
 ## Step 3. Build the title map (Mac)
 
 ```bash
-python3 -I scripts/export_lexicon_forms.py /path/to/skills-lexicon   # data/lexicon-forms.json (skill classes)
+git clone https://github.com/nikbearbrown/skills-lexicon ../skills-lexicon
+python3 -I scripts/export_lexicon_forms.py ../skills-lexicon       # data/lexicon-forms.json (skill classes)
 python3 -I scripts/make_title_map.py                                 # data/title-map.tsv
 ```
 
