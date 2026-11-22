@@ -69,6 +69,7 @@ The prototype is one static page (`page/index.html`). These screenshots show it 
 
 | Path | What it holds |
 |---|---|
+| [research-data/](research-data/) | Downloadable activity and posting tables, data sources, licenses, and reproducibility notes. |
 | [page/](page/) | The prototype: `index.html` plus its two data files. Open it through any static server (`python3 -m http.server -d page 8765`). |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to help: reviewing tags, deciding titles, the page, the cluster step |
 | [docs/GATHERING-DATA.md](docs/GATHERING-DATA.md) | How to gather the data and run the analysis for every job title |

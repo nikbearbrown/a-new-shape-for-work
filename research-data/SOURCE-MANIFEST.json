@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "analysis_run_date": "2026-11-21",
+  "snapshot_git_revision": "e0f7136e97e3a6995929ff73bd9659d6a7944e50",
+  "snapshot_note": "Git revision pins checked-in prototype artifacts, not a new execution of the upstream data extraction.",
+  "inputs": [
+    {
+      "name": "O*NET 31.0 text database",
+      "revision": "31.0",
+      "url": "https://www.onetcenter.org/dl_files/database/db_31_0_text.zip",
+      "sha256": "6883548adf5fde64cf6f801b35d15519c9225f2732c3cab0e281c652d16b23a9",
+      "license": "CC BY 4.0",
+      "credit": "U.S. Department of Labor, Employment and Training Administration (USDOL/ETA)",
+      "storage": "Upstream official archive; not mirrored here"
+    },
+    {
+      "name": "Anthropic Economic Index task penetration",
+      "revision": "4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6",
+      "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/labor_market_impacts/task_penetration.csv",
+      "sha256": "85bee872db1d55d3e9a7f4e89da5ae4a5d59aa8ec875d728fbf4b7d820984616",
+      "license": "CC BY (upstream dataset card)",
+      "credit": "Anthropic Economic Index",
+      "path": "sources/anthropic-task-penetration.csv"
+    },
+    {
+      "name": "1.3M LinkedIn Jobs & Skills (2024)",
+      "revision": "Kaggle v2",
+      "url": "https://www.kaggle.com/datasets/asaniczka/1-3m-linkedin-jobs-and-skills-2024",
+      "license": "ODC-By per project source record",
+      "credit": "Asaniczka",
+      "storage": "Raw corpus on Explorer; not in this deposit"
+    },
+    {
+      "name": "Data Analyst Job Postings (Google Search)",
+      "revision": "Kaggle v744",
+      "url": "https://www.kaggle.com/datasets/lukebarousse/data-analyst-job-postings-google-search",
+      "license": "Apache 2.0 per project source record",
+      "credit": "Luke Barousse",
+      "storage": "Raw corpus on Explorer; not in this deposit"
+    },
+    {
+      "name": "Skills Lexicon",
+      "revision": "0ba8e0c2c6a2cf5e8d7a7f9d7abd301fe0185d76",
+      "url": "https://github.com/nikbearbrown/skills-lexicon",
+      "credit": "Skills Lexicon project",
+      "storage": "Referenced; not mirrored here"
+    }
+  ],
+  "prototype_artifacts": [
+    {
+      "path": "page/data/onet.json",
+      "sha256": "f0a8fcc669d83fb788f104d7c9f79598fef64c987b975f92141844ed5ed9b372"
+    },
+    {
+      "path": "page/data/by-occupation.json",
+      "sha256": "6be405764b7141780a3f2223c9d01077b62dc92cd7d63fb716edae56fdd25d19"
+    },
+    {
+      "path": "page/data/postings.json",
+      "sha256": "78e32f63584a6d8a24f1f2076f6c8a20ba648d8e0126b39d52f8285db1caed72"
+    }
+  ],
+  "deposit_tables": [
+    {
+      "path": "activity-profiles.csv",
+      "sha256": "9432ad8b0826fa9645e9ed1d9b013eaea08f8952fc974fd3f13d6936daf1c8e2",
+      "rows": 16398
+    },
+    {
+      "path": "posting-emphasis.csv",
+      "sha256": "420c783efd92ce2c4d8156d9e4f43b93e5b53c62e8a7c829ead7c8d7f5b66137",
+      "rows": 5490
+    }
+  ]
+}
