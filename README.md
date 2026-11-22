@@ -2,7 +2,7 @@
 
 **What jobs involve, what employers advertise, and where AI use is visible**
 
-[Read the rough first draft](paper/manuscript.md) · [Help with the paper](CONTRIBUTING.md) · [Download the research data](research-data/)
+[Read the working draft](paper/manuscript.md) · [Help with the paper](CONTRIBUTING.md) · [Download the research data](research-data/)
 
 *A New Shape for Work* compares three ways of describing an occupation: how its work activities are rated, what employers emphasize in ads, and where published evidence of Claude use shows up. The prototype is a first pass. Its activity shares are modeled, not measured hours, and its phase tags are draft judgments.
 

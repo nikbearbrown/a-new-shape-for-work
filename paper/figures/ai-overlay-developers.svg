@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title description">
+<title id="title">Software developers: penetration-weighted activity by phase</title>
+<desc id="description">Six horizontal bars show the ordinal activity share broken into the portion weighted by published task penetration and its remainder. The figure reports the total weighted share of the activity index.</desc>
+<rect width="1000" height="560" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#132634">
+<text x="32" y="53" font-size="30" font-weight="700">Software developers: AI overlay by phase</text>
+<text x="32" y="86" font-size="19">Share of the occupation's modeled activity index</text>
+<rect x="32" y="109" width="24" height="18" fill="#13646a"/>
+<text x="67" y="124" font-size="17">Weighted by published task penetration</text>
+<rect x="475" y="109" width="24" height="18" fill="#cddde3" stroke="#607884"/>
+<text x="510" y="124" font-size="17">Remainder of activity index</text>
+<line x1="187" x2="187" y1="163" y2="452" stroke="#c6d1d5"/>
+<text x="187" y="477" font-size="16" text-anchor="middle">0%</text>
+<line x1="357" x2="357" y1="163" y2="452" stroke="#c6d1d5"/>
+<text x="357" y="477" font-size="16" text-anchor="middle">10%</text>
+<line x1="527" x2="527" y1="163" y2="452" stroke="#c6d1d5"/>
+<text x="527" y="477" font-size="16" text-anchor="middle">20%</text>
+<line x1="697" x2="697" y1="163" y2="452" stroke="#c6d1d5"/>
+<text x="697" y="477" font-size="16" text-anchor="middle">30%</text>
+<line x1="867" x2="867" y1="163" y2="452" stroke="#c6d1d5"/>
+<text x="867" y="477" font-size="16" text-anchor="middle">40%</text>
+<text x="32" y="196" font-size="20">Understand</text>
+<rect x="187" y="174" width="341.02" height="28" fill="#cddde3" stroke="#607884"/>
+<rect x="187" y="174" width="228.31" height="28" fill="#13646a"/>
+<text x="538.02" y="194" font-size="15">13.4% / 20.1%</text>
+<text x="32" y="242" font-size="20">Plan</text>
+<rect x="187" y="220" width="144.67" height="28" fill="#cddde3" stroke="#607884"/>
+<text x="341.67" y="240" font-size="15">0.0% / 8.5%</text>
+<text x="32" y="288" font-size="20">Produce</text>
+<rect x="187" y="266" width="277.95" height="28" fill="#cddde3" stroke="#607884"/>
+<rect x="187" y="266" width="161.50" height="28" fill="#13646a"/>
+<text x="474.95" y="286" font-size="15">9.5% / 16.4%</text>
+<text x="32" y="334" font-size="20">Check</text>
+<rect x="187" y="312" width="131.41" height="28" fill="#cddde3" stroke="#607884"/>
+<rect x="187" y="312" width="57.46" height="28" fill="#13646a"/>
+<text x="328.41" y="332" font-size="15">3.4% / 7.7%</text>
+<text x="32" y="380" font-size="20">Sustain</text>
+<rect x="187" y="358" width="191.08" height="28" fill="#cddde3" stroke="#607884"/>
+<rect x="187" y="358" width="68.68" height="28" fill="#13646a"/>
+<text x="388.08" y="378" font-size="15">4.0% / 11.2%</text>
+<text x="32" y="426" font-size="20">Coordinate</text>
+<rect x="187" y="404" width="613.70" height="28" fill="#cddde3" stroke="#607884"/>
+<rect x="187" y="404" width="75.48" height="28" fill="#13646a"/>
+<text x="810.70" y="424" font-size="15">4.4% / 36.1%</text>
+<text x="32" y="528" font-size="18" font-weight="700">Weighted total: 34.79% of the activity index. This is not work time.</text>
+</g></svg>
