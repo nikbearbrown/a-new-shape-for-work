@@ -8,6 +8,29 @@
 
 **We're inviting collaborators.** Review one claim, check a source, bring an example from an occupation you know, or help reproduce a result. You don't need cluster access to contribute to the paper. AI agents can make the same judgments independently with the kit in [replication/](replication/), so models can be compared and their disagreements reviewed first.
 
+## Abstract
+
+An employer can advertise for software developers who write code and then hire them into work that requires substantial coordination. A task inventory and a job ad can both describe that job accurately while emphasizing different things. This paper presents a prototype for comparing three views of an occupation: the mix of activities described in O*NET, the emphasis of job advertisements, and the portion of modeled activity weighted by published evidence of Claude use. The prototype organizes work into six phases: understand, plan, produce, check, sustain, and coordinate. It builds activity profiles for 911 O*NET occupations. In a U.S. subset of a LinkedIn job-ad collection, the title matcher assigned 406,172 of 1,149,342 rows to occupations before duplicate removal; 409 rated occupations had enough mapped postings for a side-by-side profile. In the pilot, checking accounts for 32% of the task-weight index for software quality assurance analysts and testers, compared with 63% of their phase-diagnostic posting mentions. Differences like this help identify what to investigate. The prototype presents the comparison as paired phase bars, shows how activity profiles differ across occupations, and lets readers trace the AI overlay to the underlying rated tasks. The denominators differ, and the prototype measures neither time on the job nor the effects of AI on employment.
+
+## Where the draft is
+
+The working draft is [paper/manuscript.md](paper/manuscript.md).
+
+## What needs to be done
+
+- Review the phase tags and the title decisions, which are still draft judgments.
+- Find better worker-side evidence, such as interviews, task diaries and time-use studies.
+- Check the headline results by reproducing them from the data deposit.
+
+The detail is in [Status and open decisions](#status-and-open-decisions).
+
+## How to contribute
+
+Read the [contributor guide](CONTRIBUTING.md). It lists each kind of contribution with where to start and what to send, the rules for this repo, how to submit, and how credit and authorship work.
+
+- **A quick contribution:** open an issue about one claim, source or decision. You don't need to review the whole paper.
+- **To become an author:** take on a component of the work, help write the paper, approve the final version and agree to be accountable for it. The guide explains each step.
+
 ## Executive summary
 
 - **The prototype works end to end on real data.** O*NET 31.0 task ratings give an estimated effort profile across six phases of work (understand, plan, produce, check, sustain, coordinate) for all 911 occupations O*NET rates. Job postings give a second layer: what employers ask for. The Anthropic Economic Index gives a third: which tasks people already bring to Claude.
