@@ -4,6 +4,28 @@ We have a [rough first draft](paper/manuscript.md), a working prototype, and [da
 
 **If you have an hour:** read one section and [open an issue](https://github.com/nikbearbrown/a-new-shape-for-work/issues/new) with one claim you would keep, change, or qualify. Name the section, explain why, and include a source or example if you have one. For a copy edit, you can also propose the wording directly in a pull request.
 
+## Getting started
+
+Follow these steps in order. Steps 1 to 3 get you access. Steps 4 to 8 take one contribution from start to finish.
+
+1. **Read first.** Read the [README](README.md), then the [working draft](paper/manuscript.md). Allow about an hour. You don't need to follow every detail, but you should know what the paper claims and what it does not.
+2. **Choose one thing to do.** Pick one row from the table under [Pick a way to help](#pick-a-way-to-help), and narrow it to one section, one occupation, one source or one result. If you can't decide, review one section of the draft.
+3. **Email Nik** at bear@bearbrown.co with the subject "A New Shape for Work: contributor". Include:
+   - your name and your GitHub username;
+   - the contribution you chose and what exactly you will look at;
+   - whether you hope to become an author or want to help without authorship.
+
+   Nik will add you to the repository as a collaborator. GitHub then emails you an invitation, which you must accept within seven days.
+4. **Claim the work.** Check the [open issues](https://github.com/nikbearbrown/a-new-shape-for-work/issues) to make sure nobody is already doing it. Then [open an issue](https://github.com/nikbearbrown/a-new-shape-for-work/issues/new) that says what you are taking on, and assign it to yourself.
+5. **Make a branch.** Clone the repository and create a branch named `your-name/short-description`, for example `priya/qa-tester-phase-tags`. Do not commit to `main`. If you don't use git, edit the file on GitHub with the pencil button and choose "Create a new branch" when you save.
+6. **Do the work.** Follow the "What to send" column for the row you chose. Keep one branch to one piece of work.
+7. **Open a pull request.** Say what you changed, how you checked it, and where you used an AI tool. Write "Closes #" and your issue's number so the two are linked, and request a review from `nikbearbrown`.
+8. **Respond to the review.** Nik or another author will comment. Revise on the same branch until it is agreed, and it will be merged.
+9. **Keep your record.** Your issues and pull requests are the record of what you did. If you hope to be an author, keep a list of them, because the paper's contribution statement is drawn from it.
+10. **Take the next step.** Pick another piece of work. If you want to be an author, tell Nik early and read [Credit and what we expect from authors](#credit-and-what-we-expect-from-authors).
+
+You can also help without access. Anyone can open an issue on this repository without emailing first.
+
 ## Pick a way to help
 
 | Contribution | Where to start | What to send |
@@ -26,7 +48,7 @@ We have a [rough first draft](paper/manuscript.md), a working prototype, and [da
 
 ## How to submit
 
-For a discussion, open an issue with the section or finding, your evidence, and a proposed next step. For an edit, fork, branch, and open a focused pull request. Say what you changed and how you checked it. Keep manuscript, tag, and code changes separate when they can be reviewed independently. If you use an AI-generated answer, verify the citations and claims before submitting it.
+For a discussion, open an issue with the section or finding, your evidence, and a proposed next step. For an edit, open a focused pull request from a branch (collaborators) or from a fork (everyone else). Say what you changed and how you checked it. Keep manuscript, tag, and code changes separate when they can be reviewed independently. If you use an AI-generated answer, verify the citations and claims before submitting it.
 
 If you want to collaborate on the paper beyond a single contribution, open an issue describing what you'd like to take on, and read [Credit and what we expect from authors](#credit-and-what-we-expect-from-authors) first.
 

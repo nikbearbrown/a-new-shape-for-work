@@ -26,7 +26,7 @@ The detail is in [Status and open decisions](#status-and-open-decisions).
 
 ## How to contribute
 
-Read the [contributor guide](CONTRIBUTING.md). It lists each kind of contribution with where to start and what to send, the rules for this repo, how to submit, and how credit and authorship work.
+Start with [Getting started](CONTRIBUTING.md#getting-started) in the [contributor guide](CONTRIBUTING.md): read the draft, pick one thing to do, and email Nik to be added as a collaborator. The guide lists each kind of contribution with where to start and what to send, the rules for this repo, how to submit, and how credit and authorship work.
 
 - **A quick contribution:** open an issue about one claim, source or decision. You don't need to review the whole paper.
 - **To become an author:** take on a component of the work, help write the paper, approve the final version and agree to be accountable for it. The guide explains each step.
