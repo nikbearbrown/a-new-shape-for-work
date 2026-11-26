@@ -10,7 +10,7 @@ By Mayank Bhadrasen (@Mayank-1024). Checked November 25, 2026.
 - **Cost:** Northeastern's library pays the full open-access fee for all three. That holds only if Nik is the corresponding author and submits from his Northeastern email.
 - **One decision needed before we submit anywhere:** all three journals hide author names from reviewers, but our draft is public on GitHub with our names on it. See "Open question" at the end.
 
-All facts checked on November 25, 2026, on the pages linked under "Sources". AI use: I used Claude to collect and compare these pages. I read each page myself and confirmed every fact below.
+All facts checked on November 25, 2026 (one on November 26, noted in Sources), on the pages linked under "Sources". AI use: I used Claude to collect and compare these pages. I read each page myself and confirmed every fact below.
 
 ## 1. Does Northeastern pay the full fee?
 
@@ -91,7 +91,7 @@ None of them mentions GitHub.
 
 **Question for Nik:** before we submit, should we post a frozen version to a preprint server (for example SocArXiv, SSRN or arXiv) and point to that?
 
-## Sources (all checked November 25, 2026)
+## Sources (checked November 25, 2026, unless noted)
 
 - SciFree for Northeastern: https://search.scifree.se/northeastern
 - Northeastern library, open access publishing: https://library.northeastern.edu/resource_discovery/open-access-publishing/
