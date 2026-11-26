@@ -37,13 +37,13 @@ For Interpreters and Translators, my estimate from the rounded dashboard shares 
 
 ## 3. Reworded tasks among the 157 missing AI joins [section 6]
 
-**Claim.** A task with no exact text match in the Anthropic file contributes zero to the AI overlay ([`scripts/build_profiles.py` line 110](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/scripts/build_profiles.py#L110), `pen or 0`). The manuscript notes this ([line 66](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/paper/manuscript.md#L66)). Some of the 157 are reworded versions of tasks the Anthropic file does score, so a few occupations are understated.
+**Claim.** A task with no exact text match in the Anthropic file contributes zero to the AI overlay ([`scripts/build_profiles.py` line 110](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/scripts/build_profiles.py#L110), `pen or 0`). The manuscript notes this ([line 66](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/paper/manuscript.md#L66)). Some of the 157 look like reworded versions of tasks the Anthropic file does score. If they are the same tasks, a few occupations are understated.
 
 **What the 157 are.** None involve encoding problems. Grouped by similarity to the closest Anthropic wording (`missing-ai-joins-review.csv`): about 23–33 differ by a letter or word (depending on the matching method), about 30 are reworded, and about 90 are new or unrelated. Of the near-identical group, only one has a nonzero score (Database Architects, 0.82), so the headline values do not move.
 
-**Reworded examples that need a human decision.**
+**Reworded examples that need a human decision.** The judgments below are my proposals, not confirmed matches.
 
-| Occupation | Current O*NET wording | Anthropic file wording | Score | My judgment |
+| Occupation | Current O*NET wording | Anthropic file wording | Score | My proposed judgment (not confirmed) |
 | --- | --- | --- | --- | --- |
 | Paralegals and Legal Assistants (23-2011.00) | Prepare, edit, or review legal documents, including legislation, briefs, pleadings… | Prepare legal documents, including briefs, pleadings… ([line 12565](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/research-data/sources/anthropic-task-penetration.csv#L12565)) | 0.7341 | Same core task, broadened. Likely a match |
 | Hydrologists (19-2043.00) | Prepare reports or presentations describing research results… | Prepare written and oral reports describing research results… ([line 12846](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/research-data/sources/anthropic-task-penetration.csv#L12846)) | 0.943 | Same task. Likely a match |
@@ -58,11 +58,17 @@ Older O*NET releases used the shorter paralegal wording (e.g. a 2012 archived My
 | Produce AI-weighted share | 0.0% | 12% |
 | Total AI index | 11% | 24% |
 
-Hydrologists' Produce AI share is 0.0 for the same reason ([`activity-profiles.csv` line 3946](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/research-data/activity-profiles.csv#L3946)).
+Hydrologists' Produce AI share is also 0.0, and the unmatched reports task is one reason ([`activity-profiles.csv` line 3946](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/research-data/activity-profiles.csv#L3946)).
+
+**How the proposed matches could be confirmed.**
+
+1. **O*NET Task IDs.** O*NET gives every task statement a Task ID. If the old wording (in the Anthropic file) and the new wording (in O*NET 31.0) carry the same Task ID across releases, O*NET itself treats them as one task that was reworded. I have not yet checked whether O*NET keeps the ID when it rewords a task, or which release the Anthropic file used.
+2. **A second, independent reviewer**, as the manuscript proposes for phase tags, with disagreements adjudicated.
+3. **A stated rule for each pair:** match only when the action, the object and the purpose are the same. A different action (writing vs reviewing) is a different task, however similar the wording.
 
 **Proposed change.**
 
-1. A reviewed crosswalk for the reworded group, with a reason for each match or non-match. No fuzzy matching at run time.
+1. A reviewed crosswalk for the reworded group, with the evidence and reason for each match or non-match. No fuzzy matching at run time.
 2. Report unmatched tasks as unavailable rather than zero, with each occupation's share of unavailable task weight, as Section 3.5 suggests.
 
 ## 4. Ad-side coverage across all occupations [section 5]
@@ -81,5 +87,6 @@ Across the 429 occupations with 50 or more retained ads, the median share of top
 
 1. Can I get the per-occupation phrase counts from the cluster run (counts only) to measure the clearance fix?
 2. For the reworded-task review, should the crosswalk live in `tags/` with `reviewed_by`, or stay in this folder until reviewed?
+3. Would you like a second reviewer for the proposed matches, and is the O*NET Task ID check the evidence you would accept?
 
 Journal options are covered in Mayank's venue recommendation (`notes/mayank-bhadrasen/`, on the `mayank/notes-folder` branch), so I have not repeated them here.

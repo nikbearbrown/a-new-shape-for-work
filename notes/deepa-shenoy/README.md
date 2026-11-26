@@ -24,11 +24,11 @@ Standard library only. It reads files and writes nothing inside the repo. The re
 | --- | --- |
 | Deposit reproduction | Done: both CSVs and Figure 3 rebuild byte-identical |
 | Security clearance tagged Sustain | Finding documented; fix and before/after shares pending per-occupation phrase counts |
-| Reworded tasks among the 157 missing joins | Candidate list built; human review in progress (paralegals, hydrologists, epidemiologists first) |
+| Reworded tasks among the 157 missing joins | Candidate list built. Proposed matches for paralegals, hydrologists and epidemiologists, not confirmed; next: O*NET Task ID check and a second reviewer |
 | Dashboard summary wording on posting coverage | Suggested rewording documented |
 
 No files outside `notes/deepa-shenoy/` are changed. `tags/` is untouched.
 
 ## AI use
 
-I used Claude to help write `verify_findings.py`, build the candidate list in the CSV, and draft these notes. I checked every number against the source files myself. I did not use AI to choose any tags; the match/no-match judgments are mine.
+I used Claude to help write `verify_findings.py`, build the candidate list in the CSV, and draft these notes. I checked every number against the source files myself. I did not use AI to choose any tags; the proposed match/no-match judgments are mine.
