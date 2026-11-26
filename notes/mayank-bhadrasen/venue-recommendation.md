@@ -96,7 +96,7 @@ None of them mentions GitHub.
 - SciFree for Northeastern: https://search.scifree.se/northeastern
 - Northeastern library, open access publishing: https://library.northeastern.edu/resource_discovery/open-access-publishing/
 - Big Data & Society submission guidelines: https://journals.sagepub.com/author-instructions/bds
-- Big Data & Society aims and scope: https://journals.sagepub.com/aims-scope/BDS (this page blocked automated access, so the scope quotes were taken from SAGE's reading site, https://sage.cnpereading.com/overview-metric/BDS)
+- Big Data & Society aims and scope: https://journals.sagepub.com/overview-metric/BDS (Description tab)
 - New Technology, Work and Employment author guidelines: https://onlinelibrary.wiley.com/page/journal/1468005x/homepage/forauthors.html
 - New Technology, Work and Employment journal description: https://www.wiley.com/en-us/New+Technology,+Work+and+Employment-p-1468005X
 - New Technology, Work and Employment metrics (decision time, acceptance rate, fee): https://www.wiley.com/en-us/journal-finder/journal/ntwe
