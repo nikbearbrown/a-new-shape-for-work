@@ -5,7 +5,7 @@ Notes from Deepa Shenoy ([@ds2204](https://github.com/ds2204)) on *A New Shape f
 | File | What it is |
 | --- | --- |
 | `findings.md` | What I checked, what I found, and what I propose to change, with file and line references |
-| `future-work.md` | Six pieces of follow-on work I'd like to help with, each tied to where the repo asks for it |
+| `future-work.md` | Seven pieces of follow-on work I'd like to help with, each tied to where the repo asks for it |
 | `verify_findings.py` | Read-only script that prints the evidence for each finding from the repo's own files |
 | `missing-ai-joins-review.csv` | All 157 rated tasks with no AI-overlay score, next to the closest Anthropic task wording, its similarity and its score |
 
