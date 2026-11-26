@@ -25,6 +25,7 @@ Standard library only. It reads files and writes nothing inside the repo. The re
 | Deposit reproduction | Done: both CSVs and Figure 3 rebuild byte-identical |
 | Security clearance tagged Sustain | Finding documented; fix and before/after shares pending per-occupation phrase counts |
 | Reworded tasks among the 157 missing joins | Candidate list built; human review in progress (paralegals, hydrologists, epidemiologists first) |
+| Dashboard summary wording on posting coverage | Suggested rewording documented |
 
 No files outside `notes/deepa-shenoy/` are changed. `tags/` is untouched.
 

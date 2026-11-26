@@ -69,6 +69,14 @@ Hydrologists' Produce AI share is 0.0 for the same reason ([`activity-profiles.c
 
 Across the 429 occupations with 50 or more retained ads, the median share of top skill mentions that are phase-diagnostic is 16.1% (min 2.2%, max 41.8%); 87 occupations are under 10%. The manuscript reports 18–42% for the eight featured occupations. Showing this coverage beside each posting profile would let readers see which profiles rest on thin evidence. This is a share of mentions, not a share of ads.
 
+## 5. Dashboard summary wording on posting coverage
+
+**Claim.** The executive summary says the posting layer "covers every occupation O*NET names a title for" ([`page/index.html` line 122](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/page/index.html#L122)). The same sentence goes on to give the 35% assignment rate, so it is not wrong, but the opening reads as full coverage.
+
+**Evidence.** The page's own "Title ambiguity" note says title matching assigned 35% of US postings, 19% had ambiguous titles and 45% matched nothing ([line 260](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/page/index.html#L260)). The README gives the coverage that results: 915 codes received postings, 429 met the 50-ad cutoff, and 409 of the 911 rated occupations can be shown side by side ([README line 40](https://github.com/nikbearbrown/a-new-shape-for-work/blob/main/README.md#L40)).
+
+**Proposed change.** Lead with the coverage readers will see, for example: "Title matching assigned 35% of 1.15 million US LinkedIn postings to an occupation, enough for posting charts for 429 occupations (409 of the 911 that O*NET rates)." Wording only; no numbers change.
+
 ## Open questions for Nik
 
 1. Can I get the per-occupation phrase counts from the cluster run (counts only) to measure the clearance fix?
