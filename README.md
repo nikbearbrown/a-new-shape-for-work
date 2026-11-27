@@ -14,7 +14,7 @@ An employer can advertise for software developers who write code and then hire t
 
 ## Where the draft is
 
-The working draft is [paper/manuscript.md](paper/manuscript.md).
+The working draft is [paper/manuscript.md](paper/manuscript.md). A separate [Critique revision candidate and review](critiq-output/) are available for author review.
 
 ## What needs to be done
 
