@@ -89,4 +89,4 @@ Across the 429 occupations with 50 or more retained ads, the median share of top
 2. For the reworded-task review, should the crosswalk live in `tags/` with `reviewed_by`, or stay in this folder until reviewed?
 3. Would you like a second reviewer for the proposed matches, and is the O*NET Task ID check the evidence you would accept?
 
-Journal options are covered in Mayank's venue recommendation (`notes/mayank-bhadrasen/`, on the `mayank/notes-folder` branch), so I have not repeated them here.
+My venue recommendation is in its own issue: [#5 Venue recommendation: Work, Employment and Society](https://github.com/nikbearbrown/a-new-shape-for-work/issues/5). Mayank's recommendation (Big Data & Society) is in `notes/mayank-bhadrasen/` on the `mayank/notes-folder` branch.
